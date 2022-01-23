@@ -28,7 +28,7 @@
 		<view class="nav-container">
 			<view class="nav-row">
 				<view class="nav">
-					<image class="icon" mode="widthFix" src="../../static/nav-1.png"></image>
+					<image class="icon" mode="widthFix" src="../../static/nav-1.png" @tap="tpPage('在线签到','../checkin/checkin')"></image>
 					<text class="name">在线签到</text>
 				</view>
 				<view class="nav">
@@ -96,7 +96,11 @@
 
 		},
 		methods: {
-
+			tpPage:function(name,path){
+				uni.navigateTo({
+					url: path
+				})
+			}
 		}
 	}
 </script>
