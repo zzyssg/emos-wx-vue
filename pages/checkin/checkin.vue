@@ -14,6 +14,8 @@
 </template>
 
 <script>
+	var QQMapWX = require("../../lib/qqmap-wx-jssdk.min.js");
+	var qqmapsdk;
 	export default {
 		data() {
 			return {
@@ -24,6 +26,23 @@
 				showImage: false
 			}
 		},
+		onLoad:function(){
+			qqmapsdk = new QQMapWX({
+				key: "5WLBZ-TZWKW-KYDRU-OTCF7-7HYO3-LGFGF"
+			})
+		},
+		onShow:function(){
+			let that = this
+			if(msg != '可以考勤'){
+				setTimeout(function(){
+					uni.showToast({
+						title: msg,
+						icon: 'none'
+					})
+				},1000);
+				that.canCheckin = false;
+			}
+		}
 		methods: {
 			clickBtn: function(){
 				let that = this
@@ -39,11 +58,121 @@
 							}
 					})
 				}else{
-					//TODO
+					//签到
+					uni.showLoading({
+						title:"签到中，请稍等..."
+					})
+					//TODO 这里不能等签到成功再显示吗？
+					setTimeout(function() {
+						uni.hideLoading()
+					}, 3000)
+					//获取地理位置
+					uni.getLocation({
+						success: function(resp){
+							let latitude = resp.latitude
+							let longitude = resp.longitude
+							console.log(latitude)
+							console.log(longitude)
+							qqmapsdk.reverseGeocoder({
+								location: {
+									latitude: latitude,
+									longitude: longitude
+								},
+								success: function(resp){
+									console.log(resp);
+									let address = resp.result.address;
+									let addressComponent = resp.result.address_component;
+									let nation = addressComponent.national;
+									let province = addressComponent.province;
+									let city = addressComponent.city;
+									let district = addressComponent.district;
+									//上传文件
+									uni.uploadFile({
+										url: that.url.checkin,
+										filePath: that.photoPath,
+										name: "photo",
+										header: {
+											token: uni.getStorageSync("token")
+										},
+										formData:{
+											address: address,
+											country: nation,
+											province: province,
+											city: city,
+											distict: district
+										},
+										success:function(resp){
+											if(resp.statusCode == 500 && resp.data == "不存在人脸模型"){
+												uni.hideLoading()
+												uni.showModal({
+													title:"提示信息",
+													content: "emos系统中不存在您的人脸模型，是否用当前这张照片作为人脸识别的模型？",
+													//TODO 这里的res是哪里来的？？？
+													success: function(res) {
+														if(res.confirm){
+															//上传头像图片
+															uni.uploadFile({
+																url: that.url.checkin,
+																filePath: that.photoPath,
+																name: "photo",
+																header: {
+																	token: uni.getStorageSync("token")
+																},
+																success:function(resp){
+																	if(resp.statusCode == 500){
+																		uni.showToast({
+																			title:resp.data,
+																			icon:'none'
+																		});
+																	}else if(resp.statusCode == 200){
+																		uni.showToast({
+																			title:"人脸建模成功",
+																			icon:'none'
+																		});
+																	}
+																}
+															})
+															
+														}
+													}
+												})
+											}else if(resp.statusCode == 200){
+												let data = JSON.parse(resp.data)
+												let code = data.code
+												let msg = data.msg
+												if(code == 200){
+													uni.hideLoading()
+													//签到成功
+													uni.showToast({
+														title: "签到成功",
+														complete:function(){
+															//TODO 跳转到签到结果统计页面
+														}
+													});
+												}
+										
+											}else if(resp.statusCode == 500){
+												uni.showToast({
+													title: resp.data,
+													icon: 'none'
+												});	
+											}
+										}	
+									})
+								},
+								fail: function(resp){
+									uni.showToast({
+										title: "定位失败",
+										icon: "none"
+									})
+									console.log(resp)
+								}
+							})
+
+						}
+					})
+					
 				}
-			},
-			afresh: function(){
-				let that = this;
 				that.btnText='拍照';
 				that.showCamera= true;
 				that.showImage= false;

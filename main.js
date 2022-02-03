@@ -15,6 +15,10 @@ let baseUrl = "http://localhost:8080/emos-wx";
 Vue.prototype.url = {
 	register: baseUrl + "/user/register",
 	login: baseUrl + "/user/login",
+	checkin: baseUrl + "/checkin/checkin",
+	createFaceModel: baseUrl + "/checkin/createFaceModel",
+	validFaceModel: baseUrl + "/checkin/validCanCheckin",
+	
 }
 
 Vue.prototype.ajax = function(url,method,data,fun){

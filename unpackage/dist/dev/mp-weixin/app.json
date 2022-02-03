@@ -52,5 +52,11 @@
       }
     ]
   },
-  "usingComponents": {}
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置信息"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

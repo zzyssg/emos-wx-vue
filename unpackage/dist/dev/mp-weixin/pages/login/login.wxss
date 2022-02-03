@@ -23,7 +23,8 @@
   position: absolute;
   bottom: 20%;
   left: 20%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #3474FF;
   color: #FFF;
 }
