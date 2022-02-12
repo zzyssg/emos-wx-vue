@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/checkin_result/checkin_result",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/my_checkin/my_checkin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/message_list/message_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/message/message",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

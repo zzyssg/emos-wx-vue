@@ -37,6 +37,7 @@
 				uni.login({
 					provider:"weixin",
 					success:function(resp){
+						console.log()
 						let code = resp.code
 						uni.getUserInfo({
 							provider:"weixin",
@@ -59,6 +60,9 @@
 							}
 						})
 						
+					},
+					fail:function(resp){
+						console.log(resp)
 					}
 				})
 				uni.switchTab({

@@ -4,12 +4,8 @@
   height: 400px;
 }
 .operate-container {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 50rpx;
 }
 .operate-container .btn {

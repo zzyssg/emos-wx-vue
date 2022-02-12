@@ -1,12 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",			
-			"style": {
-				"navigationBarTitleText": "首页"
-			}
-		}
-		,
+		
 		{
 		    "path" : "pages/login/login",
 		    "style" :                                                                                    
@@ -15,7 +9,15 @@
 
 		    }
 		    
-		},{
+		},
+		{
+			"path": "pages/index/index",			
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+		
+		,{
             "path" : "pages/register/register",
             "style" :                                                                                    
             {
@@ -61,6 +63,42 @@
         }
         ,{
             "path" : "pages/checkin/checkin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/checkin_result/checkin_result",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my_checkin/my_checkin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/message_list/message_list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/message/message",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

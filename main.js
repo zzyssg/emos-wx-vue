@@ -10,14 +10,23 @@ const app = new Vue({
 })
 app.$mount()
 
-let baseUrl = "http://localhost:8080/emos-wx";
+let baseUrl = "http://192.168.0.100:8080/emos-wx";
 
 Vue.prototype.url = {
 	register: baseUrl + "/user/register",
 	login: baseUrl + "/user/login",
 	checkin: baseUrl + "/checkin/checkin",
 	createFaceModel: baseUrl + "/checkin/createFaceModel",
-	validFaceModel: baseUrl + "/checkin/validCanCheckin",
+	validCanCheckIn: baseUrl + "/checkin/validCanCheckin",
+	searchTodayCheckin: baseUrl +"/checkin/searchTodayCheckin",
+	searchUserSummary: baseUrl + "/user/searchUserSummary",
+	searchMonthChekcin: baseUrl + "/checkin/searchMonthCheckin",
+	refreshMessage: baseUrl + "/message/refreshMessage",
+	searchMessageByPage: baseUrl + "/message/searchMessageByPage",
+	searchMessageById: baseUrl +"/message/searchMessageById",
+	updateUnreadMessage: baseUrl + "/message/updateUnreadMessage",
+	deleteMessageRefById: baseUrl + "/message/deleteMessageRefById"
+	
 	
 }
 
@@ -52,4 +61,15 @@ Vue.prototype.ajax = function(url,method,data,fun){
 		}
 	});	
 	
+}
+
+Vue.prototype.checkPermission = function(perms){
+	// 检查storage里存储的是否在perms里
+	let permission = uni.getStorage("permission")
+	for(let pm of perms){
+		if(pm.indexOf(permission) > -1){
+			return true;
+		}
+	}
+	return false	
 }

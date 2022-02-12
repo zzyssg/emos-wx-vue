@@ -8,7 +8,86 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+/* WEBPACK VAR INJECTION */(function(global) {Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.createPlugin = createPlugin;exports.createSubpackageApp = createSubpackageApp;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));
+var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 4);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+
+var realAtob;
+
+var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+var b64re = /^(?:[A-Za-z\d+/]{4})*?(?:[A-Za-z\d+/]{2}(?:==)?|[A-Za-z\d+/]{3}=?)?$/;
+
+if (typeof atob !== 'function') {
+  realAtob = function realAtob(str) {
+    str = String(str).replace(/[\t\n\f\r ]+/g, '');
+    if (!b64re.test(str)) {throw new Error("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");}
+
+    // Adding the padding if missing, for semplicity
+    str += '=='.slice(2 - (str.length & 3));
+    var bitmap;var result = '';var r1;var r2;var i = 0;
+    for (; i < str.length;) {
+      bitmap = b64.indexOf(str.charAt(i++)) << 18 | b64.indexOf(str.charAt(i++)) << 12 |
+      (r1 = b64.indexOf(str.charAt(i++))) << 6 | (r2 = b64.indexOf(str.charAt(i++)));
+
+      result += r1 === 64 ? String.fromCharCode(bitmap >> 16 & 255) :
+      r2 === 64 ? String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255) :
+      String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255, bitmap & 255);
+    }
+    return result;
+  };
+} else {
+  // 注意atob只能在全局对象上调用，例如：`const Base64 = {atob};Base64.atob('xxxx')`是错误的用法
+  realAtob = atob;
+}
+
+function b64DecodeUnicode(str) {
+  return decodeURIComponent(realAtob(str).split('').map(function (c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+}
+
+function getCurrentUserInfo() {
+  var token = wx.getStorageSync('uni_id_token') || '';
+  var tokenArr = token.split('.');
+  if (!token || tokenArr.length !== 3) {
+    return {
+      uid: null,
+      role: [],
+      permission: [],
+      tokenExpired: 0 };
+
+  }
+  var userInfo;
+  try {
+    userInfo = JSON.parse(b64DecodeUnicode(tokenArr[1]));
+  } catch (error) {
+    throw new Error('获取当前用户信息出错，详细错误信息为：' + error.message);
+  }
+  userInfo.tokenExpired = userInfo.exp * 1000;
+  delete userInfo.exp;
+  delete userInfo.iat;
+  return userInfo;
+}
+
+function uniIdMixin(Vue) {
+  Vue.prototype.uniIDHasRole = function (roleId) {var _getCurrentUserInfo =
+
+
+    getCurrentUserInfo(),role = _getCurrentUserInfo.role;
+    return role.indexOf(roleId) > -1;
+  };
+  Vue.prototype.uniIDHasPermission = function (permissionId) {var _getCurrentUserInfo2 =
+
+
+    getCurrentUserInfo(),permission = _getCurrentUserInfo2.permission;
+    return this.uniIDHasRole('admin') || permission.indexOf(permissionId) > -1;
+  };
+  Vue.prototype.uniIDTokenValid = function () {var _getCurrentUserInfo3 =
+
+
+    getCurrentUserInfo(),tokenExpired = _getCurrentUserInfo3.tokenExpired;
+    return tokenExpired > Date.now();
+  };
+}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -232,16 +311,20 @@ var promiseInterceptor = {
     if (!isPromise(res)) {
       return res;
     }
-    return res.then(function (res) {
-      return res[1];
-    }).catch(function (res) {
-      return res[0];
+    return new Promise(function (resolve, reject) {
+      res.then(function (res) {
+        if (res[0]) {
+          reject(res[0]);
+        } else {
+          resolve(res[1]);
+        }
+      });
     });
   } };
 
 
 var SYNC_API_RE =
-/^\$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/;
+/^\$|Window$|WindowStyle$|sendHostEvent|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64|getLocale|setLocale/;
 
 var CONTEXT_API_RE = /^create|Manager$/;
 
@@ -354,6 +437,44 @@ function upx2px(number, newDeviceWidth) {
   return number < 0 ? -result : result;
 }
 
+function getLocale() {
+  // 优先使用 $locale
+  var app = getApp({
+    allowDefault: true });
+
+  if (app && app.$vm) {
+    return app.$vm.$locale;
+  }
+  return wx.getSystemInfoSync().language || 'zh-Hans';
+}
+
+function setLocale(locale) {
+  var app = getApp();
+  if (!app) {
+    return false;
+  }
+  var oldLocale = app.$vm.$locale;
+  if (oldLocale !== locale) {
+    app.$vm.$locale = locale;
+    onLocaleChangeCallbacks.forEach(function (fn) {return fn({
+        locale: locale });});
+
+    return true;
+  }
+  return false;
+}
+
+var onLocaleChangeCallbacks = [];
+function onLocaleChange(fn) {
+  if (onLocaleChangeCallbacks.indexOf(fn) === -1) {
+    onLocaleChangeCallbacks.push(fn);
+  }
+}
+
+if (typeof global !== 'undefined') {
+  global.getLocale = getLocale;
+}
+
 var interceptors = {
   promiseInterceptor: promiseInterceptor };
 
@@ -361,114 +482,12 @@ var interceptors = {
 var baseApi = /*#__PURE__*/Object.freeze({
   __proto__: null,
   upx2px: upx2px,
+  getLocale: getLocale,
+  setLocale: setLocale,
+  onLocaleChange: onLocaleChange,
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
-  interceptors: interceptors });var
-
-
-EventChannel = /*#__PURE__*/function () {
-  function EventChannel(id, events) {var _this = this;_classCallCheck(this, EventChannel);
-    this.id = id;
-    this.listener = {};
-    this.emitCache = {};
-    if (events) {
-      Object.keys(events).forEach(function (name) {
-        _this.on(name, events[name]);
-      });
-    }
-  }_createClass(EventChannel, [{ key: "emit", value: function emit(
-
-    eventName) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
-      var fns = this.listener[eventName];
-      if (!fns) {
-        return (this.emitCache[eventName] || (this.emitCache[eventName] = [])).push(args);
-      }
-      fns.forEach(function (opt) {
-        opt.fn.apply(opt.fn, args);
-      });
-      this.listener[eventName] = fns.filter(function (opt) {return opt.type !== 'once';});
-    } }, { key: "on", value: function on(
-
-    eventName, fn) {
-      this._addListener(eventName, 'on', fn);
-      this._clearCache(eventName);
-    } }, { key: "once", value: function once(
-
-    eventName, fn) {
-      this._addListener(eventName, 'once', fn);
-      this._clearCache(eventName);
-    } }, { key: "off", value: function off(
-
-    eventName, fn) {
-      var fns = this.listener[eventName];
-      if (!fns) {
-        return;
-      }
-      if (fn) {
-        for (var i = 0; i < fns.length;) {
-          if (fns[i].fn === fn) {
-            fns.splice(i, 1);
-            i--;
-          }
-          i++;
-        }
-      } else {
-        delete this.listener[eventName];
-      }
-    } }, { key: "_clearCache", value: function _clearCache(
-
-    eventName) {
-      var cacheArgs = this.emitCache[eventName];
-      if (cacheArgs) {
-        for (; cacheArgs.length > 0;) {
-          this.emit.apply(this, [eventName].concat(cacheArgs.shift()));
-        }
-      }
-    } }, { key: "_addListener", value: function _addListener(
-
-    eventName, type, fn) {
-      (this.listener[eventName] || (this.listener[eventName] = [])).push({
-        fn: fn,
-        type: type });
-
-    } }]);return EventChannel;}();
-
-
-var eventChannels = {};
-
-var eventChannelStack = [];
-
-var id = 0;
-
-function initEventChannel(events) {var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  id++;
-  var eventChannel = new EventChannel(id, events);
-  if (cache) {
-    eventChannels[id] = eventChannel;
-    eventChannelStack.push(eventChannel);
-  }
-  return eventChannel;
-}
-
-function getEventChannel(id) {
-  if (id) {
-    var eventChannel = eventChannels[id];
-    delete eventChannels[id];
-    return eventChannel;
-  }
-  return eventChannelStack.shift();
-}
-
-var navigateTo = {
-  args: function args(fromArgs, toArgs) {
-    var id = initEventChannel(fromArgs.events).id;
-    if (fromArgs.url) {
-      fromArgs.url = fromArgs.url + (fromArgs.url.indexOf('?') === -1 ? '?' : '&') + '__id__=' + id;
-    }
-  },
-  returnValue: function returnValue(fromRes, toRes) {
-    fromRes.eventChannel = getEventChannel();
-  } };
+  interceptors: interceptors });
 
 
 function findExistsPageIndex(url) {
@@ -537,6 +556,20 @@ var previewImage = {
   } };
 
 
+var UUID_KEY = '__DC_STAT_UUID';
+var deviceId;
+function addUuid(result) {
+  deviceId = deviceId || wx.getStorageSync(UUID_KEY);
+  if (!deviceId) {
+    deviceId = Date.now() + '' + Math.floor(Math.random() * 1e7);
+    wx.setStorage({
+      key: UUID_KEY,
+      data: deviceId });
+
+  }
+  result.deviceId = deviceId;
+}
+
 function addSafeAreaInsets(result) {
   if (result.safeArea) {
     var safeArea = result.safeArea;
@@ -548,16 +581,22 @@ function addSafeAreaInsets(result) {
 
   }
 }
+
+var getSystemInfo = {
+  returnValue: function returnValue(result) {
+    addUuid(result);
+    addSafeAreaInsets(result);
+  } };
+
+
+// import navigateTo from 'uni-helpers/navigate-to'
+
 var protocols = {
   redirectTo: redirectTo,
-  navigateTo: navigateTo,
+  // navigateTo,  // 由于在微信开发者工具的页面参数，会显示__id__参数，因此暂时关闭mp-weixin对于navigateTo的AOP
   previewImage: previewImage,
-  getSystemInfo: {
-    returnValue: addSafeAreaInsets },
-
-  getSystemInfoSync: {
-    returnValue: addSafeAreaInsets } };
-
+  getSystemInfo: getSystemInfo,
+  getSystemInfoSync: getSystemInfo };
 
 var todos = [
 'vibrate',
@@ -588,7 +627,7 @@ function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 
           keyOption = keyOption(fromArgs[key], fromArgs, toArgs);
         }
         if (!keyOption) {// 不支持的参数
-          console.warn("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F ".concat(methodName, "\u6682\u4E0D\u652F\u6301").concat(key));
+          console.warn("The '".concat(methodName, "' method of platform '\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F' does not support option '").concat(key, "'"));
         } else if (isStr(keyOption)) {// 重写参数 key
           toArgs[keyOption] = fromArgs[key];
         } else if (isPlainObject(keyOption)) {// {name:newName,value:value}可重新指定参数 key:value
@@ -623,7 +662,7 @@ function wrapper(methodName, method) {
     var protocol = protocols[methodName];
     if (!protocol) {// 暂不支持的 api
       return function () {
-        console.error("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F \u6682\u4E0D\u652F\u6301".concat(methodName));
+        console.error("Platform '\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F' does not support '".concat(methodName, "'."));
       };
     }
     return function (arg1, arg2) {// 目前 api 最多两个参数
@@ -670,7 +709,7 @@ function createTodoApi(name) {
 
   {var fail = _ref.fail,complete = _ref.complete;
     var res = {
-      errMsg: "".concat(name, ":fail:\u6682\u4E0D\u652F\u6301 ").concat(name, " \u65B9\u6CD5") };
+      errMsg: "".concat(name, ":fail method '").concat(name, "' not supported") };
 
     isFn(fail) && fail(res);
     isFn(complete) && complete(res);
@@ -704,7 +743,7 @@ function getProvider(_ref2)
     isFn(success) && success(res);
   } else {
     res = {
-      errMsg: 'getProvider:fail:服务[' + service + ']不存在' };
+      errMsg: 'getProvider:fail service not found' };
 
     isFn(fail) && fail(res);
   }
@@ -765,18 +804,13 @@ var customize = cached(function (str) {
 });
 
 function initTriggerEvent(mpInstance) {
-  {
-    if (!wx.canIUse('nextTick')) {
-      return;
-    }
-  }
   var oldTriggerEvent = mpInstance.triggerEvent;
-  mpInstance.triggerEvent = function (event) {for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {args[_key4 - 1] = arguments[_key4];}
+  mpInstance.triggerEvent = function (event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
     return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
   };
 }
 
-function initHook(name, options) {
+function initHook(name, options, isComponent) {
   var oldHook = options[name];
   if (!oldHook) {
     options[name] = function () {
@@ -784,21 +818,24 @@ function initHook(name, options) {
     };
   } else {
     options[name] = function () {
-      initTriggerEvent(this);for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      initTriggerEvent(this);for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {args[_key4] = arguments[_key4];}
       return oldHook.apply(this, args);
     };
   }
 }
+if (!MPPage.__$wrappered) {
+  MPPage.__$wrappered = true;
+  Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    initHook('onLoad', options);
+    return MPPage(options);
+  };
+  Page.after = MPPage.after;
 
-Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  initHook('onLoad', options);
-  return MPPage(options);
-};
-
-Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  initHook('created', options);
-  return MPComponent(options);
-};
+  Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    initHook('created', options);
+    return MPComponent(options);
+  };
+}
 
 var PAGE_EVENT_HOOKS = [
 'onPullDownRefresh',
@@ -904,7 +941,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1010,6 +1047,11 @@ function initProperties(props) {var isBehavior = arguments.length > 1 && argumen
     properties.generic = {
       type: Object,
       value: null };
+
+    // scopedSlotsCompiler auto
+    properties.scopedSlotsCompiler = {
+      type: String,
+      value: '' };
 
     properties.vueSlots = { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
       type: null,
@@ -1252,7 +1294,7 @@ function getContextVm(vm) {
   return $parent && $parent.$parent;
 }
 
-function handleEvent(event) {var _this2 = this;
+function handleEvent(event) {var _this = this;
   event = wrapper$1(event);
 
   // [['tap',[['handle',[1,2,a]],['handle1',[1,2,a]]]]]
@@ -1283,14 +1325,14 @@ function handleEvent(event) {var _this2 = this;
       eventsArray.forEach(function (eventArray) {
         var methodName = eventArray[0];
         if (methodName) {
-          var handlerCtx = _this2.$vm;
+          var handlerCtx = _this.$vm;
           if (handlerCtx.$options.generic) {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
             handlerCtx = getContextVm(handlerCtx) || handlerCtx;
           }
           if (methodName === '$emit') {
             handlerCtx.$emit.apply(handlerCtx,
             processEventArgs(
-            _this2.$vm,
+            _this.$vm,
             event,
             eventArray[1],
             eventArray[2],
@@ -1310,16 +1352,20 @@ function handleEvent(event) {var _this2 = this;
             handler.once = true;
           }
           var params = processEventArgs(
-          _this2.$vm,
+          _this.$vm,
           event,
           eventArray[1],
           eventArray[2],
           isCustom,
           methodName);
 
+          params = Array.isArray(params) ? params : [];
           // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
-          // eslint-disable-next-line no-sparse-arrays
-          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
+          if (/=\s*\S+\.eventParams\s*\|\|\s*\S+\[['"]event-params['"]\]/.test(handler.toString())) {
+            // eslint-disable-next-line no-sparse-arrays
+            params = params.concat([,,,,,,,,,, event]);
+          }
+          ret.push(handler.apply(handlerCtx, params));
         }
       });
     }
@@ -1334,6 +1380,102 @@ function handleEvent(event) {var _this2 = this;
   }
 }
 
+var messages = {};
+
+var locale;
+
+{
+  locale = wx.getSystemInfoSync().language;
+}
+
+function initI18nMessages() {
+  if (!isEnableLocale()) {
+    return;
+  }
+  var localeKeys = Object.keys(__uniConfig.locales);
+  if (localeKeys.length) {
+    localeKeys.forEach(function (locale) {
+      var curMessages = messages[locale];
+      var userMessages = __uniConfig.locales[locale];
+      if (curMessages) {
+        Object.assign(curMessages, userMessages);
+      } else {
+        messages[locale] = userMessages;
+      }
+    });
+  }
+}
+
+initI18nMessages();
+
+var i18n = (0, _uniI18n.initVueI18n)(
+locale,
+{});
+
+var t = i18n.t;
+var i18nMixin = i18n.mixin = {
+  beforeCreate: function beforeCreate() {var _this2 = this;
+    var unwatch = i18n.i18n.watchLocale(function () {
+      _this2.$forceUpdate();
+    });
+    this.$once('hook:beforeDestroy', function () {
+      unwatch();
+    });
+  },
+  methods: {
+    $$t: function $$t(key, values) {
+      return t(key, values);
+    } } };
+
+
+var setLocale$1 = i18n.setLocale;
+var getLocale$1 = i18n.getLocale;
+
+function initAppLocale(Vue, appVm, locale) {
+  var state = Vue.observable({
+    locale: locale || i18n.getLocale() });
+
+  var localeWatchers = [];
+  appVm.$watchLocale = function (fn) {
+    localeWatchers.push(fn);
+  };
+  Object.defineProperty(appVm, '$locale', {
+    get: function get() {
+      return state.locale;
+    },
+    set: function set(v) {
+      state.locale = v;
+      localeWatchers.forEach(function (watch) {return watch(v);});
+    } });
+
+}
+
+function isEnableLocale() {
+  return typeof __uniConfig !== 'undefined' && __uniConfig.locales && !!Object.keys(__uniConfig.locales).length;
+}
+
+// export function initI18n() {
+//   const localeKeys = Object.keys(__uniConfig.locales || {})
+//   if (localeKeys.length) {
+//     localeKeys.forEach((locale) =>
+//       i18n.add(locale, __uniConfig.locales[locale])
+//     )
+//   }
+// }
+
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
 var hooks = [
 'onShow',
 'onHide',
@@ -1343,13 +1485,87 @@ var hooks = [
 'onUnhandledRejection'];
 
 
+function initEventChannel() {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    // 微信小程序使用自身getOpenerEventChannel
+    {
+      return this.$scope.getOpenerEventChannel();
+    }
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
+}
+
+function initScopedSlotsParams() {
+  var center = {};
+  var parents = {};
+
+  _vue.default.prototype.$hasScopedSlotsParams = function (vueId) {
+    var has = center[vueId];
+    if (!has) {
+      parents[vueId] = this;
+      this.$on('hook:destroyed', function () {
+        delete parents[vueId];
+      });
+    }
+    return has;
+  };
+
+  _vue.default.prototype.$getScopedSlotsParams = function (vueId, name, key) {
+    var data = center[vueId];
+    if (data) {
+      var object = data[name] || {};
+      return key ? object[key] : object;
+    } else {
+      parents[vueId] = this;
+      this.$on('hook:destroyed', function () {
+        delete parents[vueId];
+      });
+    }
+  };
+
+  _vue.default.prototype.$setScopedSlotsParams = function (name, value) {
+    var vueIds = this.$options.propsData.vueId;
+    if (vueIds) {
+      var vueId = vueIds.split(',')[0];
+      var object = center[vueId] = center[vueId] || {};
+      object[name] = value;
+      if (parents[vueId]) {
+        parents[vueId].$forceUpdate();
+      }
+    }
+  };
+
+  _vue.default.mixin({
+    destroyed: function destroyed() {
+      var propsData = this.$options.propsData;
+      var vueId = propsData && propsData.vueId;
+      if (vueId) {
+        delete center[vueId];
+        delete parents[vueId];
+      }
+    } });
+
+}
+
 function parseBaseApp(vm, _ref3)
 
 
 {var mocks = _ref3.mocks,initRefs = _ref3.initRefs;
+  initEventChannel();
+  {
+    initScopedSlotsParams();
+  }
   if (vm.$options.store) {
     _vue.default.prototype.$store = vm.$options.store;
   }
+  uniIdMixin(_vue.default);
 
   _vue.default.prototype.mpHost = "mp-weixin";
 
@@ -1370,7 +1586,12 @@ function parseBaseApp(vm, _ref3)
 
       delete this.$options.mpType;
       delete this.$options.mpInstance;
-
+      if (this.mpType === 'page' && typeof getApp === 'function') {// hack vue-i18n
+        var app = getApp();
+        if (app.$vm && app.$vm.$i18n) {
+          this._i18n = app.$vm.$i18n;
+        }
+      }
       if (this.mpType !== 'app') {
         initRefs(this);
         initMocks(this, mocks);
@@ -1384,7 +1605,7 @@ function parseBaseApp(vm, _ref3)
         return;
       }
       {
-        if (!wx.canIUse('nextTick')) {// 事实 上2.2.3 即可，简单使用 2.3.0 的 nextTick 判断
+        if (wx.canIUse && !wx.canIUse('nextTick')) {// 事实 上2.2.3 即可，简单使用 2.3.0 的 nextTick 判断
           console.error('当前微信基础库版本过低，请将 微信开发者工具-详情-项目设置-调试基础库版本 更换为`2.3.0`以上');
         }
       }
@@ -1415,6 +1636,8 @@ function parseBaseApp(vm, _ref3)
       appOptions[name] = methods[name];
     });
   }
+
+  initAppLocale(_vue.default, vm, wx.getSystemInfoSync().language || 'zh-Hans');
 
   initHooks(appOptions, hooks);
 
@@ -1454,16 +1677,28 @@ function initRelation(detail) {
   this.triggerEvent('__l', detail);
 }
 
+function selectAllComponents(mpInstance, selector, $refs) {
+  var components = mpInstance.selectAllComponents(selector);
+  components.forEach(function (component) {
+    var ref = component.dataset.ref;
+    $refs[ref] = component.$vm || component;
+    {
+      if (component.dataset.vueGeneric === 'scoped') {
+        component.selectAllComponents('.scoped-ref').forEach(function (scopedComponent) {
+          selectAllComponents(scopedComponent, selector, $refs);
+        });
+      }
+    }
+  });
+}
+
 function initRefs(vm) {
   var mpInstance = vm.$scope;
   Object.defineProperty(vm, '$refs', {
     get: function get() {
       var $refs = {};
-      var components = mpInstance.selectAllComponents('.vue-ref');
-      components.forEach(function (component) {
-        var ref = component.dataset.ref;
-        $refs[ref] = component.$vm || component;
-      });
+      selectAllComponents(mpInstance, '.vue-ref', $refs);
+      // TODO 暂不考虑 for 中的 scoped
       var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
       forComponents.forEach(function (component) {
         var ref = component.dataset.ref;
@@ -1504,20 +1739,6 @@ function parseApp(vm) {
 }
 
 function createApp(vm) {
-  _vue.default.prototype.getOpenerEventChannel = function () {
-    if (!this.__eventChannel__) {
-      this.__eventChannel__ = new EventChannel();
-    }
-    return this.__eventChannel__;
-  };
-  var callHook = _vue.default.prototype.__call_hook;
-  _vue.default.prototype.__call_hook = function (hook, args) {
-    if (hook === 'onLoad' && args && args.__id__) {
-      this.__eventChannel__ = getEventChannel(args.__id__);
-      delete args.__id__;
-    }
-    return callHook.call(this, hook, args);
-  };
   App(parseApp(vm));
   return vm;
 }
@@ -1720,6 +1941,61 @@ function createComponent(vueOptions) {
   }
 }
 
+function createSubpackageApp(vm) {
+  var appOptions = parseApp(vm);
+  var app = getApp({
+    allowDefault: true });
+
+  vm.$scope = app;
+  var globalData = app.globalData;
+  if (globalData) {
+    Object.keys(appOptions.globalData).forEach(function (name) {
+      if (!hasOwn(globalData, name)) {
+        globalData[name] = appOptions.globalData[name];
+      }
+    });
+  }
+  Object.keys(appOptions).forEach(function (name) {
+    if (!hasOwn(app, name)) {
+      app[name] = appOptions[name];
+    }
+  });
+  if (isFn(appOptions.onShow) && wx.onAppShow) {
+    wx.onAppShow(function () {for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      vm.__call_hook('onShow', args);
+    });
+  }
+  if (isFn(appOptions.onHide) && wx.onAppHide) {
+    wx.onAppHide(function () {for (var _len6 = arguments.length, args = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {args[_key6] = arguments[_key6];}
+      vm.__call_hook('onHide', args);
+    });
+  }
+  if (isFn(appOptions.onLaunch)) {
+    var args = wx.getLaunchOptionsSync && wx.getLaunchOptionsSync();
+    vm.__call_hook('onLaunch', args);
+  }
+  return vm;
+}
+
+function createPlugin(vm) {
+  var appOptions = parseApp(vm);
+  if (isFn(appOptions.onShow) && wx.onAppShow) {
+    wx.onAppShow(function () {for (var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {args[_key7] = arguments[_key7];}
+      appOptions.onShow.apply(vm, args);
+    });
+  }
+  if (isFn(appOptions.onHide) && wx.onAppHide) {
+    wx.onAppHide(function () {for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {args[_key8] = arguments[_key8];}
+      appOptions.onHide.apply(vm, args);
+    });
+  }
+  if (isFn(appOptions.onLaunch)) {
+    var args = wx.getLaunchOptionsSync && wx.getLaunchOptionsSync();
+    appOptions.onLaunch.call(vm, args);
+  }
+  return vm;
+}
+
 todos.forEach(function (todoApi) {
   protocols[todoApi] = false;
 });
@@ -1799,14 +2075,83 @@ if (typeof Proxy !== 'undefined' && "mp-weixin" !== 'app-plus') {
 wx.createApp = createApp;
 wx.createPage = createPage;
 wx.createComponent = createComponent;
+wx.createSubpackageApp = createSubpackageApp;
+wx.createPlugin = createPlugin;
 
 var uni$1 = uni;var _default =
 
 uni$1;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
 
-/***/ 10:
+/***/ 100:
+/*!*************************************************************!*\
+  !*** C:/products/emos-wx-vue/components/uni-popup/popup.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 101));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+// 定义 type 类型:弹出类型：top/bottom/center
+var config = {
+  // 顶部弹出
+  top: 'top',
+  // 底部弹出
+  bottom: 'bottom',
+  // 居中弹出
+  center: 'center',
+  // 消息提示
+  message: 'top',
+  // 对话框
+  dialog: 'center',
+  // 分享
+  share: 'bottom' };var _default =
+
+
+{
+  data: function data() {
+    return {
+      config: config };
+
+  },
+  mixins: [_message.default] };exports.default = _default;
+
+/***/ }),
+
+/***/ 101:
+/*!***************************************************************!*\
+  !*** C:/products/emos-wx-vue/components/uni-popup/message.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  created: function created() {
+    if (this.type === 'message') {
+      // 不显示遮罩
+      this.maskShow = false;
+      // 获取子组件对象
+      this.childrenMsg = null;
+    }
+  },
+  methods: {
+    customOpen: function customOpen() {
+      if (this.childrenMsg) {
+        this.childrenMsg.open();
+      }
+    },
+    customClose: function customClose() {
+      if (this.childrenMsg) {
+        this.childrenMsg.close();
+      }
+    } } };exports.default = _default;
+
+/***/ }),
+
+/***/ 11:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -1935,7 +2280,1100 @@ function normalizeComponent (
 
 /***/ }),
 
+/***/ 137:
+/*!***************************************************************!*\
+  !*** C:/products/emos-wx-vue/components/uni-calendar/util.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _calendar = _interopRequireDefault(__webpack_require__(/*! ./calendar.js */ 138));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+
+Calendar = /*#__PURE__*/function () {
+  function Calendar()
+
+
+
+
+
+  {var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},date = _ref.date,selected = _ref.selected,startDate = _ref.startDate,endDate = _ref.endDate,range = _ref.range;_classCallCheck(this, Calendar);
+    // 当前日期
+    this.date = this.getDate(new Date()); // 当前初入日期
+    // 打点信息
+    this.selected = selected || [];
+    // 范围开始
+    this.startDate = startDate;
+    // 范围结束
+    this.endDate = endDate;
+    this.range = range;
+    // 多选状态
+    this.cleanMultipleStatus();
+    // 每周日期
+    this.weeks = {};
+    // this._getWeek(this.date.fullDate)
+  }
+  /**
+     * 设置日期
+     * @param {Object} date
+     */_createClass(Calendar, [{ key: "setDate", value: function setDate(
+    date) {
+      this.selectDate = this.getDate(date);
+      this._getWeek(this.selectDate.fullDate);
+    }
+
+    /**
+       * 清理多选状态
+       */ }, { key: "cleanMultipleStatus", value: function cleanMultipleStatus()
+    {
+      this.multipleStatus = {
+        before: '',
+        after: '',
+        data: [] };
+
+    }
+
+    /**
+       * 重置开始日期
+       */ }, { key: "resetSatrtDate", value: function resetSatrtDate(
+    startDate) {
+      // 范围开始
+      this.startDate = startDate;
+
+    }
+
+    /**
+       * 重置结束日期
+       */ }, { key: "resetEndDate", value: function resetEndDate(
+    endDate) {
+      // 范围结束
+      this.endDate = endDate;
+    }
+
+    /**
+       * 获取任意时间
+       */ }, { key: "getDate", value: function getDate(
+    date) {var AddDayCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;var str = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'day';
+      if (!date) {
+        date = new Date();
+      }
+      if (typeof date !== 'object') {
+        date = date.replace(/-/g, '/');
+      }
+      var dd = new Date(date);
+      switch (str) {
+        case 'day':
+          dd.setDate(dd.getDate() + AddDayCount); // 获取AddDayCount天后的日期
+          break;
+        case 'month':
+          if (dd.getDate() === 31) {
+            dd.setDate(dd.getDate() + AddDayCount);
+          } else {
+            dd.setMonth(dd.getMonth() + AddDayCount); // 获取AddDayCount天后的日期
+          }
+          break;
+        case 'year':
+          dd.setFullYear(dd.getFullYear() + AddDayCount); // 获取AddDayCount天后的日期
+          break;}
+
+      var y = dd.getFullYear();
+      var m = dd.getMonth() + 1 < 10 ? '0' + (dd.getMonth() + 1) : dd.getMonth() + 1; // 获取当前月份的日期，不足10补0
+      var d = dd.getDate() < 10 ? '0' + dd.getDate() : dd.getDate(); // 获取当前几号，不足10补0
+      return {
+        fullDate: y + '-' + m + '-' + d,
+        year: y,
+        month: m,
+        date: d,
+        day: dd.getDay() };
+
+    }
+
+
+    /**
+       * 获取上月剩余天数
+       */ }, { key: "_getLastMonthDays", value: function _getLastMonthDays(
+    firstDay, full) {
+      var dateArr = [];
+      for (var i = firstDay; i > 0; i--) {
+        var beforeDate = new Date(full.year, full.month - 1, -i + 1).getDate();
+        dateArr.push({
+          date: beforeDate,
+          month: full.month - 1,
+          lunar: this.getlunar(full.year, full.month - 1, beforeDate),
+          disable: true });
+
+      }
+      return dateArr;
+    }
+    /**
+       * 获取本月天数
+       */ }, { key: "_currentMonthDys", value: function _currentMonthDys(
+    dateData, full) {var _this = this;
+      var dateArr = [];
+      var fullDate = this.date.fullDate;var _loop = function _loop(
+      i) {
+        var isinfo = false;
+        var nowDate = full.year + '-' + (full.month < 10 ?
+        full.month : full.month) + '-' + (i < 10 ?
+        '0' + i : i);
+        // 是否今天
+        var isDay = fullDate === nowDate;
+        // 获取打点信息
+        var info = _this.selected && _this.selected.find(function (item) {
+          if (_this.dateEqual(nowDate, item.date)) {
+            return item;
+          }
+        });
+
+        // 日期禁用
+        var disableBefore = true;
+        var disableAfter = true;
+        if (_this.startDate) {
+          var dateCompBefore = _this.dateCompare(_this.startDate, fullDate);
+          disableBefore = _this.dateCompare(dateCompBefore ? _this.startDate : fullDate, nowDate);
+        }
+
+        if (_this.endDate) {
+          var dateCompAfter = _this.dateCompare(fullDate, _this.endDate);
+          disableAfter = _this.dateCompare(nowDate, dateCompAfter ? _this.endDate : fullDate);
+        }
+        var multiples = _this.multipleStatus.data;
+        var checked = false;
+        var multiplesStatus = -1;
+        if (_this.range) {
+          if (multiples) {
+            multiplesStatus = multiples.findIndex(function (item) {
+              return _this.dateEqual(item, nowDate);
+            });
+          }
+          if (multiplesStatus !== -1) {
+            checked = true;
+          }
+        }
+        var data = {
+          fullDate: nowDate,
+          year: full.year,
+          date: i,
+          multiple: _this.range ? checked : false,
+          beforeMultiple: _this.dateEqual(_this.multipleStatus.before, nowDate),
+          afterMultiple: _this.dateEqual(_this.multipleStatus.after, nowDate),
+          month: full.month,
+          lunar: _this.getlunar(full.year, full.month, i),
+          disable: !disableBefore || !disableAfter,
+          isDay: isDay };
+
+        if (info) {
+          data.extraInfo = info;
+        }
+
+        dateArr.push(data);};for (var i = 1; i <= dateData; i++) {_loop(i);
+      }
+      return dateArr;
+    }
+    /**
+       * 获取下月天数
+       */ }, { key: "_getNextMonthDays", value: function _getNextMonthDays(
+    surplus, full) {
+      var dateArr = [];
+      for (var i = 1; i < surplus + 1; i++) {
+        dateArr.push({
+          date: i,
+          month: Number(full.month) + 1,
+          lunar: this.getlunar(full.year, Number(full.month) + 1, i),
+          disable: true });
+
+      }
+      return dateArr;
+    }
+
+    /**
+       * 获取当前日期详情
+       * @param {Object} date
+       */ }, { key: "getInfo", value: function getInfo(
+    date) {var _this2 = this;
+      if (!date) {
+        date = new Date();
+      }
+      var dateInfo = this.canlender.find(function (item) {return item.fullDate === _this2.getDate(date).fullDate;});
+      return dateInfo;
+    }
+
+    /**
+       * 比较时间大小
+       */ }, { key: "dateCompare", value: function dateCompare(
+    startDate, endDate) {
+      // 计算截止时间
+      startDate = new Date(startDate.replace('-', '/').replace('-', '/'));
+      // 计算详细项的截止时间
+      endDate = new Date(endDate.replace('-', '/').replace('-', '/'));
+      if (startDate <= endDate) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    /**
+       * 比较时间是否相等
+       */ }, { key: "dateEqual", value: function dateEqual(
+    before, after) {
+      // 计算截止时间
+      before = new Date(before.replace('-', '/').replace('-', '/'));
+      // 计算详细项的截止时间
+      after = new Date(after.replace('-', '/').replace('-', '/'));
+      if (before.getTime() - after.getTime() === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+
+    /**
+       * 获取日期范围内所有日期
+       * @param {Object} begin
+       * @param {Object} end
+       */ }, { key: "geDateAll", value: function geDateAll(
+    begin, end) {
+      var arr = [];
+      var ab = begin.split('-');
+      var ae = end.split('-');
+      var db = new Date();
+      db.setFullYear(ab[0], ab[1] - 1, ab[2]);
+      var de = new Date();
+      de.setFullYear(ae[0], ae[1] - 1, ae[2]);
+      var unixDb = db.getTime() - 24 * 60 * 60 * 1000;
+      var unixDe = de.getTime() - 24 * 60 * 60 * 1000;
+      for (var k = unixDb; k <= unixDe;) {
+        k = k + 24 * 60 * 60 * 1000;
+        arr.push(this.getDate(new Date(parseInt(k))).fullDate);
+      }
+      return arr;
+    }
+    /**
+       * 计算阴历日期显示
+       */ }, { key: "getlunar", value: function getlunar(
+    year, month, date) {
+      return _calendar.default.solar2lunar(year, month, date);
+    }
+    /**
+       * 设置打点
+       */ }, { key: "setSelectInfo", value: function setSelectInfo(
+    data, value) {
+      this.selected = value;
+      this._getWeek(data);
+    }
+
+    /**
+       *  获取多选状态
+       */ }, { key: "setMultiple", value: function setMultiple(
+    fullDate) {var _this$multipleStatus =
+
+
+
+      this.multipleStatus,before = _this$multipleStatus.before,after = _this$multipleStatus.after;
+
+      if (!this.range) return;
+      if (before && after) {
+        this.multipleStatus.before = '';
+        this.multipleStatus.after = '';
+        this.multipleStatus.data = [];
+      } else {
+        if (!before) {
+          this.multipleStatus.before = fullDate;
+        } else {
+          this.multipleStatus.after = fullDate;
+          if (this.dateCompare(this.multipleStatus.before, this.multipleStatus.after)) {
+            this.multipleStatus.data = this.geDateAll(this.multipleStatus.before, this.multipleStatus.after);
+          } else {
+            this.multipleStatus.data = this.geDateAll(this.multipleStatus.after, this.multipleStatus.before);
+          }
+        }
+      }
+      this._getWeek(fullDate);
+    }
+
+    /**
+       * 获取每周数据
+       * @param {Object} dateData
+       */ }, { key: "_getWeek", value: function _getWeek(
+    dateData) {var _this$getDate =
+
+
+
+
+
+
+      this.getDate(dateData),fullDate = _this$getDate.fullDate,year = _this$getDate.year,month = _this$getDate.month,date = _this$getDate.date,day = _this$getDate.day;
+      var firstDay = new Date(year, month - 1, 1).getDay();
+      var currentDay = new Date(year, month, 0).getDate();
+      var dates = {
+        lastMonthDays: this._getLastMonthDays(firstDay, this.getDate(dateData)), // 上个月末尾几天
+        currentMonthDys: this._currentMonthDys(currentDay, this.getDate(dateData)), // 本月天数
+        nextMonthDays: [], // 下个月开始几天
+        weeks: [] };
+
+      var canlender = [];
+      var surplus = 42 - (dates.lastMonthDays.length + dates.currentMonthDys.length);
+      dates.nextMonthDays = this._getNextMonthDays(surplus, this.getDate(dateData));
+      canlender = canlender.concat(dates.lastMonthDays, dates.currentMonthDys, dates.nextMonthDays);
+      var weeks = {};
+      // 拼接数组  上个月开始几天 + 本月天数+ 下个月开始几天
+      for (var i = 0; i < canlender.length; i++) {
+        if (i % 7 === 0) {
+          weeks[parseInt(i / 7)] = new Array(7);
+        }
+        weeks[parseInt(i / 7)][i % 7] = canlender[i];
+      }
+      this.canlender = canlender;
+      this.weeks = weeks;
+    }
+
+    //静态方法
+    // static init(date) {
+    // 	if (!this.instance) {
+    // 		this.instance = new Calendar(date);
+    // 	}
+    // 	return this.instance;
+    // }
+  }]);return Calendar;}();var _default =
+
+
+Calendar;exports.default = _default;
+
+/***/ }),
+
+/***/ 138:
+/*!*******************************************************************!*\
+  !*** C:/products/emos-wx-vue/components/uni-calendar/calendar.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
+                                                                                                     * @1900-2100区间内的公历、农历互转
+                                                                                                     * @charset UTF-8
+                                                                                                     * @github  https://github.com/jjonline/calendar.js
+                                                                                                     * @Author  Jea杨(JJonline@JJonline.Cn)
+                                                                                                     * @Time    2014-7-21
+                                                                                                     * @Time    2016-8-13 Fixed 2033hex、Attribution Annals
+                                                                                                     * @Time    2016-9-25 Fixed lunar LeapMonth Param Bug
+                                                                                                     * @Time    2017-7-24 Fixed use getTerm Func Param Error.use solar year,NOT lunar year
+                                                                                                     * @Version 1.0.3
+                                                                                                     * @公历转农历：calendar.solar2lunar(1987,11,01); //[you can ignore params of prefix 0]
+                                                                                                     * @农历转公历：calendar.lunar2solar(1987,09,10); //[you can ignore params of prefix 0]
+                                                                                                     */
+/* eslint-disable */
+var calendar = {
+
+  /**
+                     * 农历1900-2100的润大小信息表
+                     * @Array Of Property
+                     * @return Hex
+                     */
+  lunarInfo: [0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2, // 1900-1909
+  0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977, // 1910-1919
+  0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970, // 1920-1929
+  0x06566, 0x0d4a0, 0x0ea50, 0x06e95, 0x05ad0, 0x02b60, 0x186e3, 0x092e0, 0x1c8d7, 0x0c950, // 1930-1939
+  0x0d4a0, 0x1d8a6, 0x0b550, 0x056a0, 0x1a5b4, 0x025d0, 0x092d0, 0x0d2b2, 0x0a950, 0x0b557, // 1940-1949
+  0x06ca0, 0x0b550, 0x15355, 0x04da0, 0x0a5b0, 0x14573, 0x052b0, 0x0a9a8, 0x0e950, 0x06aa0, // 1950-1959
+  0x0aea6, 0x0ab50, 0x04b60, 0x0aae4, 0x0a570, 0x05260, 0x0f263, 0x0d950, 0x05b57, 0x056a0, // 1960-1969
+  0x096d0, 0x04dd5, 0x04ad0, 0x0a4d0, 0x0d4d4, 0x0d250, 0x0d558, 0x0b540, 0x0b6a0, 0x195a6, // 1970-1979
+  0x095b0, 0x049b0, 0x0a974, 0x0a4b0, 0x0b27a, 0x06a50, 0x06d40, 0x0af46, 0x0ab60, 0x09570, // 1980-1989
+  0x04af5, 0x04970, 0x064b0, 0x074a3, 0x0ea50, 0x06b58, 0x05ac0, 0x0ab60, 0x096d5, 0x092e0, // 1990-1999
+  0x0c960, 0x0d954, 0x0d4a0, 0x0da50, 0x07552, 0x056a0, 0x0abb7, 0x025d0, 0x092d0, 0x0cab5, // 2000-2009
+  0x0a950, 0x0b4a0, 0x0baa4, 0x0ad50, 0x055d9, 0x04ba0, 0x0a5b0, 0x15176, 0x052b0, 0x0a930, // 2010-2019
+  0x07954, 0x06aa0, 0x0ad50, 0x05b52, 0x04b60, 0x0a6e6, 0x0a4e0, 0x0d260, 0x0ea65, 0x0d530, // 2020-2029
+  0x05aa0, 0x076a3, 0x096d0, 0x04afb, 0x04ad0, 0x0a4d0, 0x1d0b6, 0x0d250, 0x0d520, 0x0dd45, // 2030-2039
+  0x0b5a0, 0x056d0, 0x055b2, 0x049b0, 0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0, // 2040-2049
+  /** Add By JJonline@JJonline.Cn**/
+  0x14b63, 0x09370, 0x049f8, 0x04970, 0x064b0, 0x168a6, 0x0ea50, 0x06b20, 0x1a6c4, 0x0aae0, // 2050-2059
+  0x0a2e0, 0x0d2e3, 0x0c960, 0x0d557, 0x0d4a0, 0x0da50, 0x05d55, 0x056a0, 0x0a6d0, 0x055d4, // 2060-2069
+  0x052d0, 0x0a9b8, 0x0a950, 0x0b4a0, 0x0b6a6, 0x0ad50, 0x055a0, 0x0aba4, 0x0a5b0, 0x052b0, // 2070-2079
+  0x0b273, 0x06930, 0x07337, 0x06aa0, 0x0ad50, 0x14b55, 0x04b60, 0x0a570, 0x054e4, 0x0d160, // 2080-2089
+  0x0e968, 0x0d520, 0x0daa0, 0x16aa6, 0x056d0, 0x04ae0, 0x0a9d4, 0x0a2d0, 0x0d150, 0x0f252, // 2090-2099
+  0x0d520], // 2100
+
+  /**
+      * 公历每个月份的天数普通表
+      * @Array Of Property
+      * @return Number
+      */
+  solarMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+
+  /**
+                                                                    * 天干地支之天干速查表
+                                                                    * @Array Of Property trans["甲","乙","丙","丁","戊","己","庚","辛","壬","癸"]
+                                                                    * @return Cn string
+                                                                    */
+  Gan: ["\u7532", "\u4E59", "\u4E19", "\u4E01", "\u620A", "\u5DF1", "\u5E9A", "\u8F9B", "\u58EC", "\u7678"],
+
+  /**
+                                                                                                                 * 天干地支之地支速查表
+                                                                                                                 * @Array Of Property
+                                                                                                                 * @trans["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"]
+                                                                                                                 * @return Cn string
+                                                                                                                 */
+  Zhi: ["\u5B50", "\u4E11", "\u5BC5", "\u536F", "\u8FB0", "\u5DF3", "\u5348", "\u672A", "\u7533", "\u9149", "\u620C", "\u4EA5"],
+
+  /**
+                                                                                                                                     * 天干地支之地支速查表<=>生肖
+                                                                                                                                     * @Array Of Property
+                                                                                                                                     * @trans["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"]
+                                                                                                                                     * @return Cn string
+                                                                                                                                     */
+  Animals: ["\u9F20", "\u725B", "\u864E", "\u5154", "\u9F99", "\u86C7", "\u9A6C", "\u7F8A", "\u7334", "\u9E21", "\u72D7", "\u732A"],
+
+  /**
+                                                                                                                                         * 24节气速查表
+                                                                                                                                         * @Array Of Property
+                                                                                                                                         * @trans["小寒","大寒","立春","雨水","惊蛰","春分","清明","谷雨","立夏","小满","芒种","夏至","小暑","大暑","立秋","处暑","白露","秋分","寒露","霜降","立冬","小雪","大雪","冬至"]
+                                                                                                                                         * @return Cn string
+                                                                                                                                         */
+  solarTerm: ["\u5C0F\u5BD2", "\u5927\u5BD2", "\u7ACB\u6625", "\u96E8\u6C34", "\u60CA\u86F0", "\u6625\u5206", "\u6E05\u660E", "\u8C37\u96E8", "\u7ACB\u590F", "\u5C0F\u6EE1", "\u8292\u79CD", "\u590F\u81F3", "\u5C0F\u6691", "\u5927\u6691", "\u7ACB\u79CB", "\u5904\u6691", "\u767D\u9732", "\u79CB\u5206", "\u5BD2\u9732", "\u971C\u964D", "\u7ACB\u51AC", "\u5C0F\u96EA", "\u5927\u96EA", "\u51AC\u81F3"],
+
+  /**
+                                                                                                                                                                                                                                                                                                                                                                                                                   * 1900-2100各年的24节气日期速查表
+                                                                                                                                                                                                                                                                                                                                                                                                                   * @Array Of Property
+                                                                                                                                                                                                                                                                                                                                                                                                                   * @return 0x string For splice
+                                                                                                                                                                                                                                                                                                                                                                                                                   */
+  sTermInfo: ['9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f',
+  '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+  '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa',
+  '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f',
+  'b027097bd097c36b0b6fc9274c91aa', '9778397bd19801ec9210c965cc920e', '97b6b97bd19801ec95f8c965cc920f',
+  '97bd09801d98082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd197c36c9210c9274c91aa',
+  '97b6b97bd19801ec95f8c965cc920e', '97bd09801d98082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2',
+  '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec95f8c965cc920e', '97bcf97c3598082c95f8e1cfcc920f',
+  '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+  '97bcf97c3598082c95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+  '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722',
+  '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f',
+  '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+  '97bcf97c359801ec95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+  '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd097bd07f595b0b6fc920fb0722',
+  '9778397bd097c36b0b6fc9210c8dc2', '9778397bd19801ec9210c9274c920e', '97b6b97bd19801ec95f8c965cc920f',
+  '97bd07f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c920e',
+  '97b6b97bd19801ec95f8c965cc920f', '97bd07f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2',
+  '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bd07f1487f595b0b0bc920fb0722',
+  '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+  '97bcf7f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+  '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722',
+  '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f531b0b0bb0b6fb0722',
+  '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+  '97bcf7f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+  '97b6b97bd19801ec9210c9274c920e', '97bcf7f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722',
+  '9778397bd097c36b0b6fc9210c91aa', '97b6b97bd197c36c9210c9274c920e', '97bcf7f0e47f531b0b0bb0b6fb0722',
+  '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c920e',
+  '97b6b7f0e47f531b0723b0b6fb0722', '7f0e37f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2',
+  '9778397bd097c36b0b70c9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e37f1487f595b0b0bb0b6fb0722',
+  '7f0e397bd097c35b0b6fc9210c8dc2', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721',
+  '7f0e27f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+  '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722',
+  '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722',
+  '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721',
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+  '97b6b7f0e47f531b0723b0787b0721', '7f0e27f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722',
+  '9778397bd097c36b0b6fc9210c91aa', '97b6b7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722',
+  '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '977837f0e37f149b0723b0787b0721',
+  '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f5307f595b0b0bc920fb0722', '7f0e397bd097c35b0b6fc9210c8dc2',
+  '977837f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e37f1487f595b0b0bb0b6fb0722',
+  '7f0e397bd097c35b0b6fc9210c8dc2', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '977837f0e37f14998082b0787b06bd',
+  '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722',
+  '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722',
+  '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0787b06bd',
+  '7f07e7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722',
+  '977837f0e37f14998082b0723b06bd', '7f07e7f0e37f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722',
+  '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b0721',
+  '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f1487f595b0b0bb0b6fb0722', '7f0e37f0e37f14898082b0723b02d5',
+  '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f1487f531b0b0bb0b6fb0722',
+  '7f0e37f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+  '7f0e37f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd',
+  '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b072297c35',
+  '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722',
+  '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f149b0723b0787b0721',
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0723b06bd',
+  '7f07e7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722', '7f0e37f0e366aa89801eb072297c35',
+  '7ec967f0e37f14998082b0723b06bd', '7f07e7f0e37f14998083b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722',
+  '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14898082b0723b02d5', '7f07e7f0e37f14998082b0787b0721',
+  '7f07e7f0e47f531b0723b0b6fb0722', '7f0e36665b66aa89801e9808297c35', '665f67f0e37f14898082b0723b02d5',
+  '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e36665b66a449801e9808297c35',
+  '665f67f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+  '7f0e36665b66a449801e9808297c35', '665f67f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd',
+  '7f07e7f0e47f531b0723b0b6fb0721', '7f0e26665b66a449801e9808297c35', '665f67f0e37f1489801eb072297c35',
+  '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722'],
+
+  /**
+                                                                                                             * 数字转中文速查表
+                                                                                                             * @Array Of Property
+                                                                                                             * @trans ['日','一','二','三','四','五','六','七','八','九','十']
+                                                                                                             * @return Cn string
+                                                                                                             */
+  nStr1: ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D", "\u5341"],
+
+  /**
+                                                                                                                             * 日期转农历称呼速查表
+                                                                                                                             * @Array Of Property
+                                                                                                                             * @trans ['初','十','廿','卅']
+                                                                                                                             * @return Cn string
+                                                                                                                             */
+  nStr2: ["\u521D", "\u5341", "\u5EFF", "\u5345"],
+
+  /**
+                                                       * 月份转农历称呼速查表
+                                                       * @Array Of Property
+                                                       * @trans ['正','一','二','三','四','五','六','七','八','九','十','冬','腊']
+                                                       * @return Cn string
+                                                       */
+  nStr3: ["\u6B63", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D", "\u5341", "\u51AC", "\u814A"],
+
+  /**
+                                                                                                                                       * 返回农历y年一整年的总天数
+                                                                                                                                       * @param lunar Year
+                                                                                                                                       * @return Number
+                                                                                                                                       * @eg:var count = calendar.lYearDays(1987) ;//count=387
+                                                                                                                                       */
+  lYearDays: function lYearDays(y) {
+    var i;var sum = 348;
+    for (i = 0x8000; i > 0x8; i >>= 1) {sum += this.lunarInfo[y - 1900] & i ? 1 : 0;}
+    return sum + this.leapDays(y);
+  },
+
+  /**
+         * 返回农历y年闰月是哪个月；若y年没有闰月 则返回0
+         * @param lunar Year
+         * @return Number (0-12)
+         * @eg:var leapMonth = calendar.leapMonth(1987) ;//leapMonth=6
+         */
+  leapMonth: function leapMonth(y) {// 闰字编码 \u95f0
+    return this.lunarInfo[y - 1900] & 0xf;
+  },
+
+  /**
+         * 返回农历y年闰月的天数 若该年没有闰月则返回0
+         * @param lunar Year
+         * @return Number (0、29、30)
+         * @eg:var leapMonthDay = calendar.leapDays(1987) ;//leapMonthDay=29
+         */
+  leapDays: function leapDays(y) {
+    if (this.leapMonth(y)) {
+      return this.lunarInfo[y - 1900] & 0x10000 ? 30 : 29;
+    }
+    return 0;
+  },
+
+  /**
+         * 返回农历y年m月（非闰月）的总天数，计算m为闰月时的天数请使用leapDays方法
+         * @param lunar Year
+         * @return Number (-1、29、30)
+         * @eg:var MonthDay = calendar.monthDays(1987,9) ;//MonthDay=29
+         */
+  monthDays: function monthDays(y, m) {
+    if (m > 12 || m < 1) {return -1;} // 月份参数从1至12，参数错误返回-1
+    return this.lunarInfo[y - 1900] & 0x10000 >> m ? 30 : 29;
+  },
+
+  /**
+         * 返回公历(!)y年m月的天数
+         * @param solar Year
+         * @return Number (-1、28、29、30、31)
+         * @eg:var solarMonthDay = calendar.leapDays(1987) ;//solarMonthDay=30
+         */
+  solarDays: function solarDays(y, m) {
+    if (m > 12 || m < 1) {return -1;} // 若参数错误 返回-1
+    var ms = m - 1;
+    if (ms == 1) {// 2月份的闰平规律测算后确认返回28或29
+      return y % 4 == 0 && y % 100 != 0 || y % 400 == 0 ? 29 : 28;
+    } else {
+      return this.solarMonth[ms];
+    }
+  },
+
+  /**
+        * 农历年份转换为干支纪年
+        * @param  lYear 农历年的年份数
+        * @return Cn string
+        */
+  toGanZhiYear: function toGanZhiYear(lYear) {
+    var ganKey = (lYear - 3) % 10;
+    var zhiKey = (lYear - 3) % 12;
+    if (ganKey == 0) ganKey = 10; // 如果余数为0则为最后一个天干
+    if (zhiKey == 0) zhiKey = 12; // 如果余数为0则为最后一个地支
+    return this.Gan[ganKey - 1] + this.Zhi[zhiKey - 1];
+  },
+
+  /**
+        * 公历月、日判断所属星座
+        * @param  cMonth [description]
+        * @param  cDay [description]
+        * @return Cn string
+        */
+  toAstro: function toAstro(cMonth, cDay) {
+    var s = "\u9B54\u7FAF\u6C34\u74F6\u53CC\u9C7C\u767D\u7F8A\u91D1\u725B\u53CC\u5B50\u5DE8\u87F9\u72EE\u5B50\u5904\u5973\u5929\u79E4\u5929\u874E\u5C04\u624B\u9B54\u7FAF";
+    var arr = [20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22];
+    return s.substr(cMonth * 2 - (cDay < arr[cMonth - 1] ? 2 : 0), 2) + "\u5EA7"; // 座
+  },
+
+  /**
+         * 传入offset偏移量返回干支
+         * @param offset 相对甲子的偏移量
+         * @return Cn string
+         */
+  toGanZhi: function toGanZhi(offset) {
+    return this.Gan[offset % 10] + this.Zhi[offset % 12];
+  },
+
+  /**
+         * 传入公历(!)y年获得该年第n个节气的公历日期
+         * @param y公历年(1900-2100)；n二十四节气中的第几个节气(1~24)；从n=1(小寒)算起
+         * @return day Number
+         * @eg:var _24 = calendar.getTerm(1987,3) ;//_24=4;意即1987年2月4日立春
+         */
+  getTerm: function getTerm(y, n) {
+    if (y < 1900 || y > 2100) {return -1;}
+    if (n < 1 || n > 24) {return -1;}
+    var _table = this.sTermInfo[y - 1900];
+    var _info = [
+    parseInt('0x' + _table.substr(0, 5)).toString(),
+    parseInt('0x' + _table.substr(5, 5)).toString(),
+    parseInt('0x' + _table.substr(10, 5)).toString(),
+    parseInt('0x' + _table.substr(15, 5)).toString(),
+    parseInt('0x' + _table.substr(20, 5)).toString(),
+    parseInt('0x' + _table.substr(25, 5)).toString()];
+
+    var _calday = [
+    _info[0].substr(0, 1),
+    _info[0].substr(1, 2),
+    _info[0].substr(3, 1),
+    _info[0].substr(4, 2),
+
+    _info[1].substr(0, 1),
+    _info[1].substr(1, 2),
+    _info[1].substr(3, 1),
+    _info[1].substr(4, 2),
+
+    _info[2].substr(0, 1),
+    _info[2].substr(1, 2),
+    _info[2].substr(3, 1),
+    _info[2].substr(4, 2),
+
+    _info[3].substr(0, 1),
+    _info[3].substr(1, 2),
+    _info[3].substr(3, 1),
+    _info[3].substr(4, 2),
+
+    _info[4].substr(0, 1),
+    _info[4].substr(1, 2),
+    _info[4].substr(3, 1),
+    _info[4].substr(4, 2),
+
+    _info[5].substr(0, 1),
+    _info[5].substr(1, 2),
+    _info[5].substr(3, 1),
+    _info[5].substr(4, 2)];
+
+    return parseInt(_calday[n - 1]);
+  },
+
+  /**
+         * 传入农历数字月份返回汉语通俗表示法
+         * @param lunar month
+         * @return Cn string
+         * @eg:var cnMonth = calendar.toChinaMonth(12) ;//cnMonth='腊月'
+         */
+  toChinaMonth: function toChinaMonth(m) {// 月 => \u6708
+    if (m > 12 || m < 1) {return -1;} // 若参数错误 返回-1
+    var s = this.nStr3[m - 1];
+    s += "\u6708"; // 加上月字
+    return s;
+  },
+
+  /**
+         * 传入农历日期数字返回汉字表示法
+         * @param lunar day
+         * @return Cn string
+         * @eg:var cnDay = calendar.toChinaDay(21) ;//cnMonth='廿一'
+         */
+  toChinaDay: function toChinaDay(d) {// 日 => \u65e5
+    var s;
+    switch (d) {
+      case 10:
+        s = "\u521D\u5341";break;
+      case 20:
+        s = "\u4E8C\u5341";break;
+        break;
+      case 30:
+        s = "\u4E09\u5341";break;
+        break;
+      default:
+        s = this.nStr2[Math.floor(d / 10)];
+        s += this.nStr1[d % 10];}
+
+    return s;
+  },
+
+  /**
+         * 年份转生肖[!仅能大致转换] => 精确划分生肖分界线是“立春”
+         * @param y year
+         * @return Cn string
+         * @eg:var animal = calendar.getAnimal(1987) ;//animal='兔'
+         */
+  getAnimal: function getAnimal(y) {
+    return this.Animals[(y - 4) % 12];
+  },
+
+  /**
+         * 传入阳历年月日获得详细的公历、农历object信息 <=>JSON
+         * @param y  solar year
+         * @param m  solar month
+         * @param d  solar day
+         * @return JSON object
+         * @eg:console.log(calendar.solar2lunar(1987,11,01));
+         */
+  solar2lunar: function solar2lunar(y, m, d) {// 参数区间1900.1.31~2100.12.31
+    // 年份限定、上限
+    if (y < 1900 || y > 2100) {
+      return -1; // undefined转换为数字变为NaN
+    }
+    // 公历传参最下限
+    if (y == 1900 && m == 1 && d < 31) {
+      return -1;
+    }
+    // 未传参  获得当天
+    if (!y) {
+      var objDate = new Date();
+    } else {
+      var objDate = new Date(y, parseInt(m) - 1, d);
+    }
+    var i;var leap = 0;var temp = 0;
+    // 修正ymd参数
+    var y = objDate.getFullYear();
+    var m = objDate.getMonth() + 1;
+    var d = objDate.getDate();
+    var offset = (Date.UTC(objDate.getFullYear(), objDate.getMonth(), objDate.getDate()) - Date.UTC(1900, 0, 31)) / 86400000;
+    for (i = 1900; i < 2101 && offset > 0; i++) {
+      temp = this.lYearDays(i);
+      offset -= temp;
+    }
+    if (offset < 0) {
+      offset += temp;i--;
+    }
+
+    // 是否今天
+    var isTodayObj = new Date();
+    var isToday = false;
+    if (isTodayObj.getFullYear() == y && isTodayObj.getMonth() + 1 == m && isTodayObj.getDate() == d) {
+      isToday = true;
+    }
+    // 星期几
+    var nWeek = objDate.getDay();
+    var cWeek = this.nStr1[nWeek];
+    // 数字表示周几顺应天朝周一开始的惯例
+    if (nWeek == 0) {
+      nWeek = 7;
+    }
+    // 农历年
+    var year = i;
+    var leap = this.leapMonth(i); // 闰哪个月
+    var isLeap = false;
+
+    // 效验闰月
+    for (i = 1; i < 13 && offset > 0; i++) {
+      // 闰月
+      if (leap > 0 && i == leap + 1 && isLeap == false) {
+        --i;
+        isLeap = true;temp = this.leapDays(year); // 计算农历闰月天数
+      } else {
+        temp = this.monthDays(year, i); // 计算农历普通月天数
+      }
+      // 解除闰月
+      if (isLeap == true && i == leap + 1) {isLeap = false;}
+      offset -= temp;
+    }
+    // 闰月导致数组下标重叠取反
+    if (offset == 0 && leap > 0 && i == leap + 1) {
+      if (isLeap) {
+        isLeap = false;
+      } else {
+        isLeap = true;--i;
+      }
+    }
+    if (offset < 0) {
+      offset += temp;--i;
+    }
+    // 农历月
+    var month = i;
+    // 农历日
+    var day = offset + 1;
+    // 天干地支处理
+    var sm = m - 1;
+    var gzY = this.toGanZhiYear(year);
+
+    // 当月的两个节气
+    // bugfix-2017-7-24 11:03:38 use lunar Year Param `y` Not `year`
+    var firstNode = this.getTerm(y, m * 2 - 1); // 返回当月「节」为几日开始
+    var secondNode = this.getTerm(y, m * 2); // 返回当月「节」为几日开始
+
+    // 依据12节气修正干支月
+    var gzM = this.toGanZhi((y - 1900) * 12 + m + 11);
+    if (d >= firstNode) {
+      gzM = this.toGanZhi((y - 1900) * 12 + m + 12);
+    }
+
+    // 传入的日期的节气与否
+    var isTerm = false;
+    var Term = null;
+    if (firstNode == d) {
+      isTerm = true;
+      Term = this.solarTerm[m * 2 - 2];
+    }
+    if (secondNode == d) {
+      isTerm = true;
+      Term = this.solarTerm[m * 2 - 1];
+    }
+    // 日柱 当月一日与 1900/1/1 相差天数
+    var dayCyclical = Date.UTC(y, sm, 1, 0, 0, 0, 0) / 86400000 + 25567 + 10;
+    var gzD = this.toGanZhi(dayCyclical + d - 1);
+    // 该日期所属的星座
+    var astro = this.toAstro(m, d);
+
+    return { 'lYear': year, 'lMonth': month, 'lDay': day, 'Animal': this.getAnimal(year), 'IMonthCn': (isLeap ? "\u95F0" : '') + this.toChinaMonth(month), 'IDayCn': this.toChinaDay(day), 'cYear': y, 'cMonth': m, 'cDay': d, 'gzYear': gzY, 'gzMonth': gzM, 'gzDay': gzD, 'isToday': isToday, 'isLeap': isLeap, 'nWeek': nWeek, 'ncWeek': "\u661F\u671F" + cWeek, 'isTerm': isTerm, 'Term': Term, 'astro': astro };
+  },
+
+  /**
+         * 传入农历年月日以及传入的月份是否闰月获得详细的公历、农历object信息 <=>JSON
+         * @param y  lunar year
+         * @param m  lunar month
+         * @param d  lunar day
+         * @param isLeapMonth  lunar month is leap or not.[如果是农历闰月第四个参数赋值true即可]
+         * @return JSON object
+         * @eg:console.log(calendar.lunar2solar(1987,9,10));
+         */
+  lunar2solar: function lunar2solar(y, m, d, isLeapMonth) {// 参数区间1900.1.31~2100.12.1
+    var isLeapMonth = !!isLeapMonth;
+    var leapOffset = 0;
+    var leapMonth = this.leapMonth(y);
+    var leapDay = this.leapDays(y);
+    if (isLeapMonth && leapMonth != m) {return -1;} // 传参要求计算该闰月公历 但该年得出的闰月与传参的月份并不同
+    if (y == 2100 && m == 12 && d > 1 || y == 1900 && m == 1 && d < 31) {return -1;} // 超出了最大极限值
+    var day = this.monthDays(y, m);
+    var _day = day;
+    // bugFix 2016-9-25
+    // if month is leap, _day use leapDays method
+    if (isLeapMonth) {
+      _day = this.leapDays(y, m);
+    }
+    if (y < 1900 || y > 2100 || d > _day) {return -1;} // 参数合法性效验
+
+    // 计算农历的时间差
+    var offset = 0;
+    for (var i = 1900; i < y; i++) {
+      offset += this.lYearDays(i);
+    }
+    var leap = 0;var isAdd = false;
+    for (var i = 1; i < m; i++) {
+      leap = this.leapMonth(y);
+      if (!isAdd) {// 处理闰月
+        if (leap <= i && leap > 0) {
+          offset += this.leapDays(y);isAdd = true;
+        }
+      }
+      offset += this.monthDays(y, i);
+    }
+    // 转换闰月农历 需补充该年闰月的前一个月的时差
+    if (isLeapMonth) {offset += day;}
+    // 1900年农历正月一日的公历时间为1900年1月30日0时0分0秒(该时间也是本农历的最开始起始点)
+    var stmap = Date.UTC(1900, 1, 30, 0, 0, 0);
+    var calObj = new Date((offset + d - 31) * 86400000 + stmap);
+    var cY = calObj.getUTCFullYear();
+    var cM = calObj.getUTCMonth() + 1;
+    var cD = calObj.getUTCDate();
+
+    return this.solar2lunar(cY, cM, cD);
+  } };var _default =
+
+
+calendar;exports.default = _default;
+
+/***/ }),
+
+/***/ 160:
+/*!*************************************************************!*\
+  !*** C:/products/emos-wx-vue/components/uni-icons/icons.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  "pulldown": "\uE588",
+  "refreshempty": "\uE461",
+  "back": "\uE471",
+  "forward": "\uE470",
+  "more": "\uE507",
+  "more-filled": "\uE537",
+  "scan": "\uE612",
+  "qq": "\uE264",
+  "weibo": "\uE260",
+  "weixin": "\uE261",
+  "pengyouquan": "\uE262",
+  "loop": "\uE565",
+  "refresh": "\uE407",
+  "refresh-filled": "\uE437",
+  "arrowthindown": "\uE585",
+  "arrowthinleft": "\uE586",
+  "arrowthinright": "\uE587",
+  "arrowthinup": "\uE584",
+  "undo-filled": "\uE7D6",
+  "undo": "\uE406",
+  "redo": "\uE405",
+  "redo-filled": "\uE7D9",
+  "bars": "\uE563",
+  "chatboxes": "\uE203",
+  "camera": "\uE301",
+  "chatboxes-filled": "\uE233",
+  "camera-filled": "\uE7EF",
+  "cart-filled": "\uE7F4",
+  "cart": "\uE7F5",
+  "checkbox-filled": "\uE442",
+  "checkbox": "\uE7FA",
+  "arrowleft": "\uE582",
+  "arrowdown": "\uE581",
+  "arrowright": "\uE583",
+  "smallcircle-filled": "\uE801",
+  "arrowup": "\uE580",
+  "circle": "\uE411",
+  "eye-filled": "\uE568",
+  "eye-slash-filled": "\uE822",
+  "eye-slash": "\uE823",
+  "eye": "\uE824",
+  "flag-filled": "\uE825",
+  "flag": "\uE508",
+  "gear-filled": "\uE532",
+  "reload": "\uE462",
+  "gear": "\uE502",
+  "hand-thumbsdown-filled": "\uE83B",
+  "hand-thumbsdown": "\uE83C",
+  "hand-thumbsup-filled": "\uE83D",
+  "heart-filled": "\uE83E",
+  "hand-thumbsup": "\uE83F",
+  "heart": "\uE840",
+  "home": "\uE500",
+  "info": "\uE504",
+  "home-filled": "\uE530",
+  "info-filled": "\uE534",
+  "circle-filled": "\uE441",
+  "chat-filled": "\uE847",
+  "chat": "\uE263",
+  "mail-open-filled": "\uE84D",
+  "email-filled": "\uE231",
+  "mail-open": "\uE84E",
+  "email": "\uE201",
+  "checkmarkempty": "\uE472",
+  "list": "\uE562",
+  "locked-filled": "\uE856",
+  "locked": "\uE506",
+  "map-filled": "\uE85C",
+  "map-pin": "\uE85E",
+  "map-pin-ellipse": "\uE864",
+  "map": "\uE364",
+  "minus-filled": "\uE440",
+  "mic-filled": "\uE332",
+  "minus": "\uE410",
+  "micoff": "\uE360",
+  "mic": "\uE302",
+  "clear": "\uE434",
+  "smallcircle": "\uE868",
+  "close": "\uE404",
+  "closeempty": "\uE460",
+  "paperclip": "\uE567",
+  "paperplane": "\uE503",
+  "paperplane-filled": "\uE86E",
+  "person-filled": "\uE131",
+  "contact-filled": "\uE130",
+  "person": "\uE101",
+  "contact": "\uE100",
+  "images-filled": "\uE87A",
+  "phone": "\uE200",
+  "images": "\uE87B",
+  "image": "\uE363",
+  "image-filled": "\uE877",
+  "location-filled": "\uE333",
+  "location": "\uE303",
+  "plus-filled": "\uE439",
+  "plus": "\uE409",
+  "plusempty": "\uE468",
+  "help-filled": "\uE535",
+  "help": "\uE505",
+  "navigate-filled": "\uE884",
+  "navigate": "\uE501",
+  "mic-slash-filled": "\uE892",
+  "search": "\uE466",
+  "settings": "\uE560",
+  "sound": "\uE590",
+  "sound-filled": "\uE8A1",
+  "spinner-cycle": "\uE465",
+  "download-filled": "\uE8A4",
+  "personadd-filled": "\uE132",
+  "videocam-filled": "\uE8AF",
+  "personadd": "\uE102",
+  "upload": "\uE402",
+  "upload-filled": "\uE8B1",
+  "starhalf": "\uE463",
+  "star-filled": "\uE438",
+  "star": "\uE408",
+  "trash": "\uE401",
+  "phone-filled": "\uE230",
+  "compose": "\uE400",
+  "videocam": "\uE300",
+  "trash-filled": "\uE8DC",
+  "download": "\uE403",
+  "chatbubble-filled": "\uE232",
+  "chatbubble": "\uE202",
+  "cloud-download": "\uE8E4",
+  "cloud-upload-filled": "\uE8E5",
+  "cloud-upload": "\uE8E6",
+  "cloud-download-filled": "\uE8E9",
+  "headphones": "\uE8BF",
+  "shop": "\uE609" };exports.default = _default;
+
+/***/ }),
+
 /***/ 2:
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ 3:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -1946,7 +3384,7 @@ function normalizeComponent (
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/*!
  * Vue.js v2.6.11
- * (c) 2014-2020 Evan You
+ * (c) 2014-2021 Evan You
  * Released under the MIT License.
  */
 /*  */
@@ -4590,7 +6028,7 @@ function renderList (
       var iterator = val[Symbol.iterator]();
       var result = iterator.next();
       while (!result.done) {
-        ret.push(render(result.value, ret.length, i++, i)); // fixed by xxxxxx
+        ret.push(render(result.value, ret.length, i, i++)); // fixed by xxxxxx
         result = iterator.next();
       }
     } else {
@@ -6026,10 +7464,10 @@ function updateChildComponent (
     // keep a copy of raw propsData
     vm.$options.propsData = propsData;
   }
-  
+
   // fixed by xxxxxx update properties(mp runtime)
   vm._$updateProperties && vm._$updateProperties(vm);
-  
+
   // update listeners
   listeners = listeners || emptyObject;
   var oldListeners = vm.$options._parentListeners;
@@ -6555,12 +7993,12 @@ function initProps (vm, propsOptions) {
       defineReactive$$1(props, key, value, function () {
         if (!isRoot && !isUpdatingChildComponent) {
           {
-            if(vm.mpHost === 'mp-baidu'){//百度 observer 在 setData callback 之后触发，直接忽略该 warn
+            if(vm.mpHost === 'mp-baidu' || vm.mpHost === 'mp-kuaishou'){//百度、快手 observer 在 setData callback 之后触发，直接忽略该 warn
                 return
             }
             //fixed by xxxxxx __next_tick_pending,uni://form-field 时不告警
             if(
-                key === 'value' && 
+                key === 'value' &&
                 Array.isArray(vm.$options.behaviors) &&
                 vm.$options.behaviors.indexOf('uni://form-field') !== -1
               ){
@@ -6572,7 +8010,7 @@ function initProps (vm, propsOptions) {
             var $parent = vm.$parent;
             while($parent){
               if($parent.__next_tick_pending){
-                return  
+                return
               }
               $parent = $parent.$parent;
             }
@@ -6900,10 +8338,10 @@ function initMixin (Vue) {
     initEvents(vm);
     initRender(vm);
     callHook(vm, 'beforeCreate');
-    !vm._$fallback && initInjections(vm); // resolve injections before data/props  
+    !vm._$fallback && initInjections(vm); // resolve injections before data/props
     initState(vm);
     !vm._$fallback && initProvide(vm); // resolve provide after data/props
-    !vm._$fallback && callHook(vm, 'created');      
+    !vm._$fallback && callHook(vm, 'created');
 
     /* istanbul ignore if */
     if ( true && config.performance && mark) {
@@ -7402,7 +8840,8 @@ function _diff(current, pre, path, result) {
                 var currentType = type(currentValue);
                 var preType = type(preValue);
                 if (currentType != ARRAYTYPE && currentType != OBJECTTYPE) {
-                    if (currentValue != pre[key]) {
+                    // NOTE 此处将 != 修改为 !==。涉及地方太多恐怕测试不到，如果出现数据对比问题，将其修改回来。
+                    if (currentValue !== pre[key]) {
                         setResult(result, (path == '' ? '' : path + ".") + key, currentValue);
                     }
                 } else if (currentType == ARRAYTYPE) {
@@ -7461,7 +8900,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7482,14 +8921,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7575,7 +9014,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"emos-wx-vue","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7628,7 +9067,7 @@ function mountComponent$1(
       }
     }
   }
-  
+
   !vm._$fallback && callHook(vm, 'beforeMount');
 
   var updateComponent = function () {
@@ -7751,7 +9190,7 @@ function internalMixin(Vue) {
     Vue.util.warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
     console.error(err);
     /* eslint-disable no-undef */
-    var app = getApp();
+    var app = typeof getApp === 'function' && getApp();
     if (app && app.onError) {
       app.onError(err);
     }
@@ -7827,14 +9266,16 @@ function internalMixin(Vue) {
     if (!target) {
       target = this;
     }
-    target[key] = value;
+    // 解决动态属性添加
+    Vue.set(target, key, value)
   };
 
   Vue.prototype.__set_sync = function(target, key, value) {
     if (!target) {
       target = this;
     }
-    target[key] = value;
+    // 解决动态属性添加
+    Vue.set(target, key, value)
   };
 
   Vue.prototype.__get_orig = function(item) {
@@ -7905,6 +9346,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onError',
     'onUnhandledRejection',
     //Page
+    'onInit',
     'onLoad',
     // 'onShow',
     'onReady',
@@ -7966,7 +9408,7 @@ Vue.prototype.__patch__ = patch;
 // public mount method
 Vue.prototype.$mount = function(
     el ,
-    hydrating 
+    hydrating
 ) {
     return mountComponent$1(this, el, hydrating)
 };
@@ -7978,45 +9420,478 @@ internalMixin(Vue);
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
-
-/***/ }),
-
-/***/ 3:
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
 
 /***/ 4:
-/*!*****************************************!*\
-  !*** C:/product/emos-wx-vue/pages.json ***!
-  \*****************************************/
+/*!*************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, global) {Object.defineProperty(exports, "__esModule", { value: true });exports.compileI18nJsonStr = compileI18nJsonStr;exports.hasI18nJson = hasI18nJson;exports.initVueI18n = initVueI18n;exports.isI18nStr = isI18nStr;exports.normalizeLocale = normalizeLocale;exports.parseI18nJson = parseI18nJson;exports.resolveLocale = resolveLocale;exports.isString = exports.LOCALE_ZH_HANT = exports.LOCALE_ZH_HANS = exports.LOCALE_FR = exports.LOCALE_ES = exports.LOCALE_EN = exports.I18n = exports.Formatter = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var isArray = Array.isArray;
+var isObject = function isObject(val) {return val !== null && typeof val === 'object';};
+var defaultDelimiters = ['{', '}'];var
+BaseFormatter = /*#__PURE__*/function () {
+  function BaseFormatter() {_classCallCheck(this, BaseFormatter);
+    this._caches = Object.create(null);
+  }_createClass(BaseFormatter, [{ key: "interpolate", value: function interpolate(
+    message, values) {var delimiters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultDelimiters;
+      if (!values) {
+        return [message];
+      }
+      var tokens = this._caches[message];
+      if (!tokens) {
+        tokens = parse(message, delimiters);
+        this._caches[message] = tokens;
+      }
+      return compile(tokens, values);
+    } }]);return BaseFormatter;}();exports.Formatter = BaseFormatter;
+
+var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+function parse(format, _ref) {var _ref2 = _slicedToArray(_ref, 2),startDelimiter = _ref2[0],endDelimiter = _ref2[1];
+  var tokens = [];
+  var position = 0;
+  var text = '';
+  while (position < format.length) {
+    var char = format[position++];
+    if (char === startDelimiter) {
+      if (text) {
+        tokens.push({ type: 'text', value: text });
+      }
+      text = '';
+      var sub = '';
+      char = format[position++];
+      while (char !== undefined && char !== endDelimiter) {
+        sub += char;
+        char = format[position++];
+      }
+      var isClosed = char === endDelimiter;
+      var type = RE_TOKEN_LIST_VALUE.test(sub) ?
+      'list' :
+      isClosed && RE_TOKEN_NAMED_VALUE.test(sub) ?
+      'named' :
+      'unknown';
+      tokens.push({ value: sub, type: type });
+    }
+    //  else if (char === '%') {
+    //   // when found rails i18n syntax, skip text capture
+    //   if (format[position] !== '{') {
+    //     text += char
+    //   }
+    // }
+    else {
+        text += char;
+      }
+  }
+  text && tokens.push({ type: 'text', value: text });
+  return tokens;
+}
+function compile(tokens, values) {
+  var compiled = [];
+  var index = 0;
+  var mode = isArray(values) ?
+  'list' :
+  isObject(values) ?
+  'named' :
+  'unknown';
+  if (mode === 'unknown') {
+    return compiled;
+  }
+  while (index < tokens.length) {
+    var token = tokens[index];
+    switch (token.type) {
+      case 'text':
+        compiled.push(token.value);
+        break;
+      case 'list':
+        compiled.push(values[parseInt(token.value, 10)]);
+        break;
+      case 'named':
+        if (mode === 'named') {
+          compiled.push(values[token.value]);
+        } else
+        {
+          if (true) {
+            console.warn("Type of token '".concat(token.type, "' and format of value '").concat(mode, "' don't match!"));
+          }
+        }
+        break;
+      case 'unknown':
+        if (true) {
+          console.warn("Detect 'unknown' type of token!");
+        }
+        break;}
+
+    index++;
+  }
+  return compiled;
+}
+
+var LOCALE_ZH_HANS = 'zh-Hans';exports.LOCALE_ZH_HANS = LOCALE_ZH_HANS;
+var LOCALE_ZH_HANT = 'zh-Hant';exports.LOCALE_ZH_HANT = LOCALE_ZH_HANT;
+var LOCALE_EN = 'en';exports.LOCALE_EN = LOCALE_EN;
+var LOCALE_FR = 'fr';exports.LOCALE_FR = LOCALE_FR;
+var LOCALE_ES = 'es';exports.LOCALE_ES = LOCALE_ES;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var hasOwn = function hasOwn(val, key) {return hasOwnProperty.call(val, key);};
+var defaultFormatter = new BaseFormatter();
+function include(str, parts) {
+  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
+}
+function startsWith(str, parts) {
+  return parts.find(function (part) {return str.indexOf(part) === 0;});
+}
+function normalizeLocale(locale, messages) {
+  if (!locale) {
+    return;
+  }
+  locale = locale.trim().replace(/_/g, '-');
+  if (messages && messages[locale]) {
+    return locale;
+  }
+  locale = locale.toLowerCase();
+  if (locale.indexOf('zh') === 0) {
+    if (locale.indexOf('-hans') > -1) {
+      return LOCALE_ZH_HANS;
+    }
+    if (locale.indexOf('-hant') > -1) {
+      return LOCALE_ZH_HANT;
+    }
+    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
+      return LOCALE_ZH_HANT;
+    }
+    return LOCALE_ZH_HANS;
+  }
+  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
+  if (lang) {
+    return lang;
+  }
+}var
+I18n = /*#__PURE__*/function () {
+  function I18n(_ref3) {var locale = _ref3.locale,fallbackLocale = _ref3.fallbackLocale,messages = _ref3.messages,watcher = _ref3.watcher,formater = _ref3.formater;_classCallCheck(this, I18n);
+    this.locale = LOCALE_EN;
+    this.fallbackLocale = LOCALE_EN;
+    this.message = {};
+    this.messages = {};
+    this.watchers = [];
+    if (fallbackLocale) {
+      this.fallbackLocale = fallbackLocale;
+    }
+    this.formater = formater || defaultFormatter;
+    this.messages = messages || {};
+    this.setLocale(locale || LOCALE_EN);
+    if (watcher) {
+      this.watchLocale(watcher);
+    }
+  }_createClass(I18n, [{ key: "setLocale", value: function setLocale(
+    locale) {var _this = this;
+      var oldLocale = this.locale;
+      this.locale = normalizeLocale(locale, this.messages) || this.fallbackLocale;
+      if (!this.messages[this.locale]) {
+        // 可能初始化时不存在
+        this.messages[this.locale] = {};
+      }
+      this.message = this.messages[this.locale];
+      // 仅发生变化时，通知
+      if (oldLocale !== this.locale) {
+        this.watchers.forEach(function (watcher) {
+          watcher(_this.locale, oldLocale);
+        });
+      }
+    } }, { key: "getLocale", value: function getLocale()
+    {
+      return this.locale;
+    } }, { key: "watchLocale", value: function watchLocale(
+    fn) {var _this2 = this;
+      var index = this.watchers.push(fn) - 1;
+      return function () {
+        _this2.watchers.splice(index, 1);
+      };
+    } }, { key: "add", value: function add(
+    locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      var curMessages = this.messages[locale];
+      if (curMessages) {
+        if (override) {
+          Object.assign(curMessages, message);
+        } else
+        {
+          Object.keys(message).forEach(function (key) {
+            if (!hasOwn(curMessages, key)) {
+              curMessages[key] = message[key];
+            }
+          });
+        }
+      } else
+      {
+        this.messages[locale] = message;
+      }
+    } }, { key: "f", value: function f(
+    message, values, delimiters) {
+      return this.formater.interpolate(message, values, delimiters).join('');
+    } }, { key: "t", value: function t(
+    key, locale, values) {
+      var message = this.message;
+      if (typeof locale === 'string') {
+        locale = normalizeLocale(locale, this.messages);
+        locale && (message = this.messages[locale]);
+      } else
+      {
+        values = locale;
+      }
+      if (!hasOwn(message, key)) {
+        console.warn("Cannot translate the value of keypath ".concat(key, ". Use the value of keypath as default."));
+        return key;
+      }
+      return this.formater.interpolate(message[key], values).join('');
+    } }]);return I18n;}();exports.I18n = I18n;
+
+
+function watchAppLocale(appVm, i18n) {
+  // 需要保证 watch 的触发在组件渲染之前
+  if (appVm.$watchLocale) {
+    // vue2
+    appVm.$watchLocale(function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  } else
+  {
+    appVm.$watch(function () {return appVm.$locale;}, function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  }
+}
+function getDefaultLocale() {
+  if (typeof uni !== 'undefined' && uni.getLocale) {
+    return uni.getLocale();
+  }
+  // 小程序平台，uni 和 uni-i18n 互相引用，导致访问不到 uni，故在 global 上挂了 getLocale
+  if (typeof global !== 'undefined' && global.getLocale) {
+    return global.getLocale();
+  }
+  return LOCALE_EN;
+}
+function initVueI18n(locale) {var messages = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var fallbackLocale = arguments.length > 2 ? arguments[2] : undefined;var watcher = arguments.length > 3 ? arguments[3] : undefined;
+  // 兼容旧版本入参
+  if (typeof locale !== 'string') {var _ref4 =
+    [
+    messages,
+    locale];locale = _ref4[0];messages = _ref4[1];
+
+  }
+  if (typeof locale !== 'string') {
+    // 因为小程序平台，uni-i18n 和 uni 互相引用，导致此时访问 uni 时，为 undefined
+    locale = getDefaultLocale();
+  }
+  if (typeof fallbackLocale !== 'string') {
+    fallbackLocale =
+    typeof __uniConfig !== 'undefined' && __uniConfig.fallbackLocale ||
+    LOCALE_EN;
+  }
+  var i18n = new I18n({
+    locale: locale,
+    fallbackLocale: fallbackLocale,
+    messages: messages,
+    watcher: watcher });
+
+  var _t = function t(key, values) {
+    if (typeof getApp !== 'function') {
+      // app view
+      /* eslint-disable no-func-assign */
+      _t = function t(key, values) {
+        return i18n.t(key, values);
+      };
+    } else
+    {
+      var isWatchedAppLocale = false;
+      _t = function t(key, values) {
+        var appVm = getApp().$vm;
+        // 可能$vm还不存在，比如在支付宝小程序中，组件定义较早，在props的default里使用了t()函数（如uni-goods-nav），此时app还未初始化
+        // options: {
+        // 	type: Array,
+        // 	default () {
+        // 		return [{
+        // 			icon: 'shop',
+        // 			text: t("uni-goods-nav.options.shop"),
+        // 		}, {
+        // 			icon: 'cart',
+        // 			text: t("uni-goods-nav.options.cart")
+        // 		}]
+        // 	}
+        // },
+        if (appVm) {
+          // 触发响应式
+          appVm.$locale;
+          if (!isWatchedAppLocale) {
+            isWatchedAppLocale = true;
+            watchAppLocale(appVm, i18n);
+          }
+        }
+        return i18n.t(key, values);
+      };
+    }
+    return _t(key, values);
+  };
+  return {
+    i18n: i18n,
+    f: function f(message, values, delimiters) {
+      return i18n.f(message, values, delimiters);
+    },
+    t: function t(key, values) {
+      return _t(key, values);
+    },
+    add: function add(locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      return i18n.add(locale, message, override);
+    },
+    watch: function watch(fn) {
+      return i18n.watchLocale(fn);
+    },
+    getLocale: function getLocale() {
+      return i18n.getLocale();
+    },
+    setLocale: function setLocale(newLocale) {
+      return i18n.setLocale(newLocale);
+    } };
+
+}
+
+var isString = function isString(val) {return typeof val === 'string';};exports.isString = isString;
+var formater;
+function hasI18nJson(jsonObj, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  return walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        return true;
+      }
+    } else
+    {
+      return hasI18nJson(value, delimiters);
+    }
+  });
+}
+function parseI18nJson(jsonObj, values, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        jsonObj[key] = compileStr(value, values, delimiters);
+      }
+    } else
+    {
+      parseI18nJson(value, values, delimiters);
+    }
+  });
+  return jsonObj;
+}
+function compileI18nJsonStr(jsonStr, _ref5) {var locale = _ref5.locale,locales = _ref5.locales,delimiters = _ref5.delimiters;
+  if (!isI18nStr(jsonStr, delimiters)) {
+    return jsonStr;
+  }
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  var localeValues = [];
+  Object.keys(locales).forEach(function (name) {
+    if (name !== locale) {
+      localeValues.push({
+        locale: name,
+        values: locales[name] });
+
+    }
+  });
+  localeValues.unshift({ locale: locale, values: locales[locale] });
+  try {
+    return JSON.stringify(compileJsonObj(JSON.parse(jsonStr), localeValues, delimiters), null, 2);
+  }
+  catch (e) {}
+  return jsonStr;
+}
+function isI18nStr(value, delimiters) {
+  return value.indexOf(delimiters[0]) > -1;
+}
+function compileStr(value, values, delimiters) {
+  return formater.interpolate(value, values, delimiters).join('');
+}
+function compileValue(jsonObj, key, localeValues, delimiters) {
+  var value = jsonObj[key];
+  if (isString(value)) {
+    // 存在国际化
+    if (isI18nStr(value, delimiters)) {
+      jsonObj[key] = compileStr(value, localeValues[0].values, delimiters);
+      if (localeValues.length > 1) {
+        // 格式化国际化语言
+        var valueLocales = jsonObj[key + 'Locales'] = {};
+        localeValues.forEach(function (localValue) {
+          valueLocales[localValue.locale] = compileStr(value, localValue.values, delimiters);
+        });
+      }
+    }
+  } else
+  {
+    compileJsonObj(value, localeValues, delimiters);
+  }
+}
+function compileJsonObj(jsonObj, localeValues, delimiters) {
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    compileValue(jsonObj, key, localeValues, delimiters);
+  });
+  return jsonObj;
+}
+function walkJsonObj(jsonObj, walk) {
+  if (isArray(jsonObj)) {
+    for (var i = 0; i < jsonObj.length; i++) {
+      if (walk(jsonObj, i)) {
+        return true;
+      }
+    }
+  } else
+  if (isObject(jsonObj)) {
+    for (var key in jsonObj) {
+      if (walk(jsonObj, key)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function resolveLocale(locales) {
+  return function (locale) {
+    if (!locale) {
+      return locale;
+    }
+    locale = normalizeLocale(locale) || locale;
+    return resolveLocaleChain(locale).find(function (locale) {return locales.indexOf(locale) > -1;});
+  };
+}
+function resolveLocaleChain(locale) {
+  var chain = [];
+  var tokens = locale.split('-');
+  while (tokens.length) {
+    chain.push(tokens.join('-'));
+    tokens.pop();
+  }
+  return chain;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+
+/***/ 5:
+/*!******************************************!*\
+  !*** C:/products/emos-wx-vue/pages.json ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8024,10 +9899,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 72:
-/*!********************************************************!*\
-  !*** C:/product/emos-wx-vue/lib/qqmap-wx-jssdk.min.js ***!
-  \********************************************************/
+/***/ 68:
+/*!*********************************************************!*\
+  !*** C:/products/emos-wx-vue/lib/qqmap-wx-jssdk.min.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

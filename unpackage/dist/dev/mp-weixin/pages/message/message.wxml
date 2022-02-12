@@ -1,0 +1,1 @@
+<view class="message"><view class="header"><view class="desc">{{sendTime}}</view><view data-event-opts="{{[['tap',[['deleteMsg',['$event']]]]]}}" class="opt" bindtap="__e">删除</view></view><view class="content">{{msg}}</view></view>

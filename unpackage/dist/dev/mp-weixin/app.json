@@ -1,13 +1,17 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/login/login",
+    "pages/index/index",
     "pages/register/register",
     "pages/meetings/meetings",
     "pages/document/document",
     "pages/contacts/contacts",
     "pages/mine/mine",
-    "pages/checkin/checkin"
+    "pages/checkin/checkin",
+    "pages/checkin_result/checkin_result",
+    "pages/my_checkin/my_checkin",
+    "pages/message_list/message_list",
+    "pages/message/message"
   ],
   "subPackages": [],
   "window": {
@@ -57,6 +61,5 @@
       "desc": "获取位置信息"
     }
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

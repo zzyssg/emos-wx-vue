@@ -33,16 +33,20 @@
 		},
 		onShow:function(){
 			let that = this
-			if(msg != '可以考勤'){
-				setTimeout(function(){
-					uni.showToast({
-						title: msg,
-						icon: 'none'
-					})
-				},1000);
-				that.canCheckin = false;
-			}
-		}
+			that.ajax(that.url.validCanCheckIn,'GET',null,function(){
+				let msg = resp.data.msg;
+				if(msg != '可以考勤'){
+					setTimeout(function(){
+						uni.showToast({
+							title: msg,
+							icon: 'none'
+						})
+					},1000);
+					that.canCheckin = false;
+				}
+			})
+			
+		},
 		methods: {
 			clickBtn: function(){
 				let that = this
@@ -51,6 +55,7 @@
 					take.takePhoto({
 							quality:"high",
 							success:function(resp) {
+								console.log(resp)
 								that.btnText= "签到";
 								that.photoPath= resp.tempImagePath;
 								that.showCamera=false;
@@ -82,10 +87,13 @@
 									console.log(resp);
 									let address = resp.result.address;
 									let addressComponent = resp.result.address_component;
-									let nation = addressComponent.national;
+									let nation = addressComponent.nation;
 									let province = addressComponent.province;
 									let city = addressComponent.city;
 									let district = addressComponent.district;
+									console.log(that.url.checkin)
+									console.log(that.photoPath)
+									console.log(uni.getStorageSync("token"))
 									//上传文件
 									uni.uploadFile({
 										url: that.url.checkin,
@@ -99,9 +107,10 @@
 											country: nation,
 											province: province,
 											city: city,
-											distict: district
+											district: district
 										},
 										success:function(resp){
+											console.log(resp)
 											if(resp.statusCode == 500 && resp.data == "不存在人脸模型"){
 												uni.hideLoading()
 												uni.showModal({
@@ -109,16 +118,18 @@
 													content: "emos系统中不存在您的人脸模型，是否用当前这张照片作为人脸识别的模型？",
 													//TODO 这里的res是哪里来的？？？
 													success: function(res) {
+														console.log(res)
 														if(res.confirm){
 															//上传头像图片
 															uni.uploadFile({
-																url: that.url.checkin,
+																url: that.url.createFaceModel,
 																filePath: that.photoPath,
 																name: "photo",
 																header: {
 																	token: uni.getStorageSync("token")
 																},
 																success:function(resp){
+																	console.log(resp)
 																	if(resp.statusCode == 500){
 																		uni.showToast({
 																			title:resp.data,
@@ -130,6 +141,9 @@
 																			icon:'none'
 																		});
 																	}
+																},
+																fail:function(resp){
+																	console.log(resp)
 																}
 															})
 															
@@ -147,6 +161,9 @@
 														title: "签到成功",
 														complete:function(){
 															//TODO 跳转到签到结果统计页面
+															uni.navigateTo({
+																url: "../checkin_result/checkin_result"
+															})
 														}
 													});
 												}
@@ -157,7 +174,10 @@
 													icon: 'none'
 												});	
 											}
-										}	
+										},
+										fail:function(resp){
+											console.log(resp)
+										}
 									})
 								},
 								fail: function(resp){
