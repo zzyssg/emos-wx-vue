@@ -26,15 +26,6 @@
             
         }
         ,{
-            "path" : "pages/meetings/meetings",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "会议",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
             "path" : "pages/document/document",
             "style" :                                                                                    
             {
@@ -92,7 +83,7 @@
             "path" : "pages/message_list/message_list",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "会议",
                 "enablePullDownRefresh": false
             }
             

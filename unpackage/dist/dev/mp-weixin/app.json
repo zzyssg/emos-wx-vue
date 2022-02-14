@@ -3,7 +3,6 @@
     "pages/login/login",
     "pages/index/index",
     "pages/register/register",
-    "pages/meetings/meetings",
     "pages/document/document",
     "pages/contacts/contacts",
     "pages/mine/mine",

@@ -25,8 +25,13 @@
 /* 透明度 */
 /* 文章场景相关 */
 .uni-popup-message.data-v-2b5e1e44 {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
   background-color: #e1f3d8;
   padding: 10px 15px;
   border-color: #eee;

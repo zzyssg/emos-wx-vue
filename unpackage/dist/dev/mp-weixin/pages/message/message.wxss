@@ -2,8 +2,12 @@
   margin: 55rpx;
 }
 .message .header {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
   margin-bottom: 15rpx;
 }
 .message .header .desc {
@@ -21,6 +25,7 @@
   padding: 20rpx 45rpx;
   line-height: 1.8;
   color: #333;
-  border-radius: 15rpx;
+  -webkit-border-radius: 15rpx;
+          border-radius: 15rpx;
 }
 

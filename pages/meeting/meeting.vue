@@ -245,36 +245,30 @@ export default {
 				
 			}
 			if(that.typeIndex == '1'){
-				data.place = place;
+				data.place = that.place;
 			}
 			//发送ajax请求
 			let url;
 			if(that.opt == 'insert'){
-				url = that.url.insertMeeting
+				url = that.url.insertMeeting;
 			}else if(that.opt == 'update'){
-				url = that.url.updateMeetingInfo
+				url = that.url.updateMeetingInfo;
 			}
-			that.ajax({
-				url,
-				'POST',
-				data,
-				function(resp){
-					uni.showToast(
-					{
-						icon:"success",
-						title:"会议保存成功",
-						complete: function(){
-							setTimeOut(
-								funtion(){
-									uni.navigateBack()
-								},2000
-							)
-						}
-					}
+			that.ajax(url,"POST",data,function(resp){
+					uni.showToast({
+								icon:"success",
+								title:"会议保存成功",
+								complete: function(){
+									setTimeout(
+										function(){
+											uni.navigateBack({})
+										},2000)
+								}
+							}
 					)
-				}
-				
-			})
+				}	
+			)
+
 		},
 		deleteMember: function(id){
 			let that= this
@@ -302,7 +296,7 @@ export default {
 
 
 	}
-};
+}
 
 </script>
 

@@ -7,7 +7,7 @@
 	</view>
 	<view v-for="one in list" :key="one.date">
 		<view class="list-title">{{ one.date }}</view>
-		<view class="item" v-for="meeting in one.list" :key="meeting.id" @longpress="deleteMeetingById(meeting.id,meeting.date,meeting.start)">
+		<view class="item" v-for="meeting in one.list" :key="meeting.id" @longpress="deleteById(meeting.id,meeting.date,meeting.start)">
 			<view class="header">
 				<view class="left">
 					<image v-if="meeting.type == '线上会议'" src="../../static/icon-11.png" mode="widthFix" class="icon"></image>

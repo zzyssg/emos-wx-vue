@@ -15,8 +15,12 @@
   border-bottom: solid 1rpx #f0f0f0;
   font-size: 30rpx;
   color: #333;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
 }
 .item .value {
   display: block;
