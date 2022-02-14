@@ -11,7 +11,10 @@
     "pages/checkin_result/checkin_result",
     "pages/my_checkin/my_checkin",
     "pages/message_list/message_list",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/meeting_list/meeting_list",
+    "pages/meeting/meeting",
+    "pages/members/members"
   ],
   "subPackages": [],
   "window": {
@@ -32,7 +35,7 @@
       },
       {
         "text": "会议",
-        "pagePath": "pages/meetings/meetings",
+        "pagePath": "pages/meeting_list/meeting_list",
         "iconPath": "static/bar-2.png",
         "selectedIconPath": "static/bar-2-active.png"
       },
@@ -61,5 +64,6 @@
       "desc": "获取位置信息"
     }
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

@@ -106,6 +106,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/meeting_list/meeting_list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "会议列表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/meeting/meeting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "会议详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/members/members",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "选择成员",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -125,7 +152,7 @@
 			},
 			{
 				"text":"会议",
-				"pagePath":"pages/meetings/meetings",
+				"pagePath":"pages/meeting_list/meeting_list",
 				"iconPath":"static/bar-2.png",
 				"selectedIconPath":"static/bar-2-active.png"
 			},
