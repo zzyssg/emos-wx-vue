@@ -44,7 +44,7 @@
 	<view class="members">
 		<view class="number">参会者（{{ members.length }}人）</view>
 		<view class="member">
-			<view class="user" v-for="one in members" :key="one.id">
+			<view class="user" v-for="one in members" :key="one.id" @longpress="deleteMember(one.id)">
 				<image :src="one.photo" mode="widthFix" class="photo"></image>
 				<text class="name">{{ one.name }}</text>
 			</view>
@@ -53,7 +53,7 @@
 			</view>
 		</view>
 	</view>
-	<button class="btn">保存</button>
+	<button class="btn" @tap="save()">保存</button>
 	<uni-popup ref="popupPlace" type="dialog">
 		<uni-popup-dialog mode="input" title="编辑文字内容" :value="place" placeholder="输入会议地点"/>
 	</uni-popup>
@@ -123,7 +123,26 @@ export default {
 				//结束时间向后推移60min
 				now.setTime(now.getTime() + 60*60*1000);
 				that.end = now.format("hh:mm");
-			}
+			}else if (that.opt == 'edit') {
+					//获取数据
+					that.ajax(that.url.searchMeetingById, 'POST', { id: that.id }, function(resp) {
+						let result = resp.data.result;
+						that.uuid = result.uuid;
+						that.title = result.title;
+						that.date = result.date;
+						that.start = result.start;
+						that.end = result.end;
+						that.typeIndex = result.type - 1;
+						that.place = result.place;
+						let desc = result.desc;
+						if (desc != null && desc != '') {
+							that.desc = desc;
+						}
+						that.members = result.members;
+						that.instanceId = result.instanceId;
+					});
+				
+			}	
 		}else{
 			//member页面回退
 			//数组中的字符串转为数字
@@ -197,6 +216,88 @@ export default {
 					title: '内容不能为空'
 				});
 			}
+		},
+		save: function(){
+			let that = this
+			let array = []
+			for(let one of that.members){
+				array.push(one.id)
+			}
+			//验证数据
+			if(that.checkBlank(that.tile,"会议题目")||
+				that.checkValidStartAndEnd(that.start,that.end) ||
+				(that.typeIndex == '1' && that.checkBlank(that.place),"会议地点") ||
+				that.checkBlank(that.desc,"会议描述") ||
+				array.length == 0){
+				return;
+			}
+			let data = {
+				title : that.title,
+				start : that.start,
+				end : that.end,
+				typeIndex : that.typeIndex,
+				place : that.place,
+				desc : that.desc,
+				members : json.stringify(array),
+				id : that.id,
+				instanceId : that.instanceId
+				
+				
+			}
+			if(that.typeIndex == '1'){
+				data.place = place;
+			}
+			//发送ajax请求
+			let url;
+			if(that.opt == 'insert'){
+				url = that.url.insertMeeting
+			}else if(that.opt == 'update'){
+				url = that.url.updateMeetingInfo
+			}
+			that.ajax({
+				url,
+				'POST',
+				data,
+				function(resp){
+					uni.showToast(
+					{
+						icon:"success",
+						title:"会议保存成功",
+						complete: function(){
+							setTimeOut(
+								funtion(){
+									uni.navigateBack()
+								},2000
+							)
+						}
+					}
+					)
+				}
+				
+			})
+		},
+		deleteMember: function(id){
+			let that= this
+			uni.vibrateShort({})
+			uni.showModal({
+				title:"提示信息",
+				content:"删除参会人员？",
+				success: function(resp){
+					if(resp.confirm){
+						let pos;
+						for(let i = 0;i < that.members.length;i++){
+							if(members[i].id ==  id){
+								pos = i;
+								break;
+							}
+						}
+					}
+					that.members.splice(pos,1);
+					
+				}
+				
+				
+			})
 		}
 
 

@@ -1,16 +1,50 @@
 <template>
-<view class="page">
-	<uni-list>
-		<uni-list-chat v-for="one in list" :title="one.senderName" 
-		  :avatar="one.senderPhoto" :note="one.msg" badge-positon="left" 
-		  :badge-text="one.readFlag ? '' : 'dot'" :key="one.id" link="navigateTo" 
-		  :to="'../message/message?id=' + one.id + '&readFlag=' + one.readFlag + '&refId=' + one.refId">
-			<view class="chat-custom-right">
-				<text class="chat-custom-text">{{ one.sendTime }}</text>
+	<view class="page">
+		<image src="../../static/logo-3.jpg" mode="widthFix" class="logo"></image>
+		<view class="add" v-if="checkPermission(['ROOT', 'MEETING:INSERT'])" 
+		@tap="toMeetingPage(null,'insert')">
+			<image src="../../static/icon-17.png" mode="widthFix" class="icon"></image>
+			<text>创建会议</text>
+		</view>
+		<view v-for="one in list" :key="one.date">
+			<view class="list-title">{{one.date}}</view>
+			<view class="item" v-for="meeting in one.list" :key="meeting.id"
+			@longpress="deleteById(meeting.id, meeting.date, meeting.start)">
+				<view class="header">
+					<view class="left">
+						<image v-if="meeting.type=='线上会议'" src="../../static/icon-11.png" mode="widthFix" class="icon"></image>
+						<image v-if="meeting.type=='线下会议'" src="../../static/icon-11.png" mode="widthFix" class="icon"></image>
+						<text>{{meeting.type}}</text>
+						<text :class="meeting.status=='未开始'?'blue':'red'">（{{meeting.status}}）</text>
+					</view>
+					<view class="right" @tap="toMeetingPage(meeting.id, 'edit')"
+					v-if="checkPermission(['ROOT', 'MEETING:UPDATE']) && meeting.status == '未开始'">
+						<text>编辑</text>
+					</view>
+				</view>
+				<view class="content">
+					<view class="title">{{meeting.title}}</view>
+					<view class="attr">
+						<view class="timer">
+							<image src="../../static/icon-14.png" mode="widthFix" class="icon"></image>
+							<text>{{meeting.start}} ~ {{meeting.end}}</text>
+						</view>
+						<view class="creator">
+							<image src="../../static/icon-15.png" mode="widthFix" class="icon"></image>
+							<text>{{meeting.name}}</text>
+						</view>
+						<view class="place" v-if="meeting.type!='线上会议'">
+							<image src="../../static/icon-16.png" mode="widthFix" class="icon"></image>
+							<text>{{meeting.place}}</text>
+						</view>
+					</view>
+					<view class="desc">{{meeting.desc}}</view>
+					<button class="btn" v-if="meeting.type=='线上会议'"
+					@tap="enter(meeting.id,meeting.uuid,meeting.date,meeting.start)">进入</button>
+				</view>
 			</view>
-		</uni-list-chat>
-	</uni-list>
-</view>
+		</view>
+	</view>
 
 </template>
 
