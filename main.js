@@ -12,6 +12,8 @@ app.$mount()
 
 // let baseUrl = "http://192.168.0.100:8080/emos-wx";
 let baseUrl = "http://127.0.0.1:8080/emos-wx";
+let workflow = "http://47.103.71.33:9090/emos-workflow";
+Vue.prototype.code = "66F153F9E9A85DA9";
 
 Vue.prototype.url = {
 	register: baseUrl + "/user/register",
@@ -33,7 +35,11 @@ Vue.prototype.url = {
 	insertMeeting: baseUrl + "/meeting/insertMeeting",
 	updateMeetingInfo : baseUrl + "/meeting/updateMeetingInfo",
 	searchMeetingById: baseUrl + "/meeting/searchMeetingById",
-	deleteMeetingById: baseUrl + "/meeting/deleteMeetingById"
+	deleteMeetingById: baseUrl + "/meeting/deleteMeetingById",
+	searchUserTaskListByPage: workflow + "/workflow/searchUserTaskListByPage",
+	approvalMeeting:workflow + "/workflow/approvalMeeting",
+	selectUserPhotoAndName : baseUrl + "/workflow/selectUserPhotoAndName"
+	
 	
 	
 }

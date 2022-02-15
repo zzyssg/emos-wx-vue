@@ -13,7 +13,9 @@
     "pages/message/message",
     "pages/meeting_list/meeting_list",
     "pages/meeting/meeting",
-    "pages/members/members"
+    "pages/members/members",
+    "pages/approval_list/approval_list",
+    "pages/approval/approval"
   ],
   "subPackages": [],
   "window": {
@@ -63,6 +65,5 @@
       "desc": "获取位置信息"
     }
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

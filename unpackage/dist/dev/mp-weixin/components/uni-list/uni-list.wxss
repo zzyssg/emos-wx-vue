@@ -25,15 +25,10 @@
 /* 透明度 */
 /* 文章场景相关 */
 .uni-list {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   background-color: #ffffff;
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .uni-list--border {
   position: relative;

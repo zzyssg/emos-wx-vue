@@ -25,22 +25,11 @@
 /* 透明度 */
 /* 文章场景相关 */
 .uni-calendar-item__weeks-box.data-v-09f1e40c {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
+  flex: 1;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .uni-calendar-item__weeks-box-text.data-v-09f1e40c {
   font-size: 28rpx;
@@ -52,19 +41,10 @@
 }
 .uni-calendar-item__weeks-box-item.data-v-09f1e40c {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100rpx;
   height: 100rpx;
 }
@@ -74,8 +54,7 @@
   right: 5px;
   width: 8px;
   height: 8px;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
+  border-radius: 8px;
   background-color: #dd524d;
 }
 .circle-green.data-v-09f1e40c {

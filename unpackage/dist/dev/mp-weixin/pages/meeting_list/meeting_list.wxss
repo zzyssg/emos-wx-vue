@@ -11,8 +11,6 @@
   color: #333;
   position: absolute;
   top: 50rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .add .icon {
@@ -36,24 +34,17 @@
   border: solid #e0e0e0 1rpx;
   padding: 30rpx;
   background-color: #f7f9fd;
-  -webkit-border-radius: 15rpx;
-          border-radius: 15rpx;
+  border-radius: 15rpx;
   margin-bottom: 45rpx;
 }
 .item .header {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  justify-content: space-between;
   border-bottom: #e0e0e0 solid 1rpx;
   padding-bottom: 20rpx;
   margin-bottom: 20rpx;
 }
 .item .header .left {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .item .header .left .icon {
@@ -83,8 +74,6 @@
   color: #333;
 }
 .item .content .attr {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   color: #999;
   font-size: 30rpx;
@@ -94,8 +83,6 @@
 .item .content .attr .creator,
 .item .content .attr .place {
   margin-right: 35rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .item .content .attr .timer .icon,
@@ -118,8 +105,7 @@
   height: 60rpx;
   font-size: 30rpx;
   padding: 0 10rpx;
-  -webkit-border-radius: 30rpx;
-          border-radius: 30rpx;
+  border-radius: 30rpx;
   position: absolute;
   right: 0rpx;
   top: 20rpx;

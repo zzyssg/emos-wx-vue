@@ -36,7 +36,7 @@
 					</view>
 				</view>
 				<view class="desc">{{ meeting.desc }}</view>
-				<button class="btn" v-if="meeting.type == '线上会议'">进入</button>
+				<button class="btn" v-if="meeting.type == '线上会议'" @tap="enter(meeting.id,meeting.uuid,meeting.date,meeting.start)">进入</button>
 			</view>
 		</view>
 	</view>
@@ -152,34 +152,64 @@
 				let that = this
 				uni.vibrateShort({})
 				uni.showModal({
-					title:"提示信息",
-					content:"是否删除会议？",
-					success:function(resp){
-						if(resp.confirm){
-							let data = {
-								id :id
-							}
-							that.ajax(that.url.deleteMeetingById,'POST',data,function(resp){
-								uni.showToast({
-									icon:'success',
-									title:"删除成功",
-									complete:function(){
-										setTimeout(function(){
-											that.page = 1;
-											that.isLastPage = false
-											uni.pageScrollTo({
-												scrollTop:'0'
+								title:"提示信息",
+								content:"是否删除这个会议？",
+								success:function(resp){
+									if(resp.confirm){
+										let data={
+											id:id
+										}
+										that.ajax(that.url.deleteMeetingById,"POST",data,function(resp){
+											uni.showToast({
+												icon:"success",
+												title:"删除成功",
+												complete:function(){
+													setTimeout(function(){
+														that.page=1
+														that.isLastPage=false
+														uni.pageScrollTo({
+															scrollTop:"0"
+														})
+														that.list=[]
+														that.loadMeetingList(that)
+													},2000)
+												}
 											})
-											that.list=[]
-											that.loadMeetingList(that)
-										},2000)
+										})
 									}
-								})	
+								}
 							})
-						}
-					}
+				// uni.showModal({
+				// 	title:"提示信息",
+				// 	content:"是否删除会议？",
+				// 	success:function(resp){
+				// 		if(resp.confirm){
+				// 			let data = {
+				// 				id :id
+				// 			}
+				// 			that.ajax(that.url.deleteMeetingById,'POST',data,function(resp){
+				// 				debugger
+				// 				uni.showToast({
+				// 					icon:'success',
+				// 					title:"删除成功",
+				// 					complete:function(){
+				// 						debugger
+				// 						setTimeout(function(){
+				// 							that.page = 1;
+				// 							that.isLastPage = false
+				// 							uni.pageScrollTo({
+				// 								scrollTop:'0'
+				// 							})
+				// 							that.list=[]
+				// 							that.loadMeetingList(that)
+				// 						},2000)
+				// 					}
+				// 				})	
+				// 			})
+				// 		}
+				// 	}
 					
-				})
+				// })
 			}
 
 		}

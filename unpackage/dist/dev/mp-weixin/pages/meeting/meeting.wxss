@@ -30,16 +30,10 @@
   border-bottom: solid 1rpx #f0f0f0;
   font-size: 30rpx;
   color: #333;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .attr .list .item .value {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   color: #333;
 }
@@ -61,14 +55,9 @@
   font-weight: bold;
 }
 .members .member {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-          justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .members .member .user {
   width: 100rpx;
@@ -80,8 +69,7 @@
 .members .member .user .photo {
   width: 100rpx;
   height: 100rpx;
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
   margin-bottom: 5rpx;
 }
 .members .member .user .name {
